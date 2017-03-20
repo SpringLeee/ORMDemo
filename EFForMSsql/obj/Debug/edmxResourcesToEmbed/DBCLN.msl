@@ -1,0 +1,1848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CLN20140830ModelStoreContainer" CdmEntityContainer="CLNContext">
+    <EntitySetMapping Name="CLN_AlertComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_AlertComment">
+        <MappingFragment StoreEntitySet="CLN_AlertComment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AlertCommentId" ColumnName="AlertCommentId" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Adddate" ColumnName="Adddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_Comment">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_Comment">
+        <MappingFragment StoreEntitySet="CLN_Comment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_Email">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_Email">
+        <MappingFragment StoreEntitySet="CLN_Email">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_Favorite">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_Favorite">
+        <MappingFragment StoreEntitySet="CLN_Favorite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FriendId" ColumnName="FriendId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Adddate" ColumnName="Adddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_Friend">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_Friend">
+        <MappingFragment StoreEntitySet="CLN_Friend">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FriendID" ColumnName="FriendID" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="OutFriendID" ColumnName="OutFriendID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_Group">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_Group">
+        <MappingFragment StoreEntitySet="CLN_Group">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupNameEn" ColumnName="GroupNameEn" />
+          <ScalarProperty Name="IsOpen" ColumnName="IsOpen" />
+          <ScalarProperty Name="Peoples" ColumnName="Peoples" />
+          <ScalarProperty Name="Rights" ColumnName="Rights" />
+          <ScalarProperty Name="px" ColumnName="px" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="DiscriptionEn" ColumnName="DiscriptionEn" />
+          <ScalarProperty Name="Introduce" ColumnName="Introduce" />
+          <ScalarProperty Name="IntroduceEn" ColumnName="IntroduceEn" />
+          <ScalarProperty Name="CoopSubmitCount" ColumnName="CoopSubmitCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_GroupDiscuss">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_GroupDiscuss">
+        <MappingFragment StoreEntitySet="CLN_GroupDiscuss">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_GroupMember">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_GroupMember">
+        <MappingFragment StoreEntitySet="CLN_GroupMember">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RelationUserId" ColumnName="RelationUserId" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="px" ColumnName="px" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_JieQiaHistory">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_JieQiaHistory">
+        <MappingFragment StoreEntitySet="CLN_JieQiaHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_ProjectType1">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_ProjectType1">
+        <MappingFragment StoreEntitySet="CLN_ProjectType1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Name_En" ColumnName="Name_En" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_ProjectType2">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_ProjectType2">
+        <MappingFragment StoreEntitySet="CLN_ProjectType2">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Name_En" ColumnName="Name_En" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_Remark">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_Remark">
+        <MappingFragment StoreEntitySet="CLN_Remark">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="senderId" ColumnName="senderId" />
+          <ScalarProperty Name="receiverId" ColumnName="receiverId" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="postTime" ColumnName="postTime" />
+          <ScalarProperty Name="remarkId" ColumnName="remarkId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_RemarkShop">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_RemarkShop">
+        <MappingFragment StoreEntitySet="CLN_RemarkShop">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+          <ScalarProperty Name="Des" ColumnName="Des" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_Resource">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_Resource">
+        <MappingFragment StoreEntitySet="CLN_Resource">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ResourceProvince" ColumnName="ResourceProvince" />
+          <ScalarProperty Name="ResourceCity" ColumnName="ResourceCity" />
+          <ScalarProperty Name="ResourceServiceM" ColumnName="ResourceServiceM" />
+          <ScalarProperty Name="ResourceServiceD" ColumnName="ResourceServiceD" />
+          <ScalarProperty Name="Type2" ColumnName="Type2" />
+          <ScalarProperty Name="Type3" ColumnName="Type3" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="BussinessRule" ColumnName="BussinessRule" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="LastModTime" ColumnName="LastModTime" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="MD5" ColumnName="MD5" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ChildType" ColumnName="ChildType" />
+          <ScalarProperty Name="FromType" ColumnName="FromType" />
+          <ScalarProperty Name="FromData" ColumnName="FromData" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_ResourceFiles">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_ResourceFiles">
+        <MappingFragment StoreEntitySet="CLN_ResourceFiles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="MIME" ColumnName="MIME" />
+          <ScalarProperty Name="AbsPath" ColumnName="AbsPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLN_UserAuthorze">
+      <EntityTypeMapping TypeName="CLN20140830Model.CLN_UserAuthorze">
+        <MappingFragment StoreEntitySet="CLN_UserAuthorze">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RuleType" ColumnName="RuleType" />
+          <ScalarProperty Name="Rights" ColumnName="Rights" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_AccountLog">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_AccountLog">
+        <MappingFragment StoreEntitySet="NT_AccountLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Operate" ColumnName="Operate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+          <ScalarProperty Name="TargetId" ColumnName="TargetId" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="LogIP" ColumnName="LogIP" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Activity">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Activity">
+        <MappingFragment StoreEntitySet="NT_Activity">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ActivityTime" ColumnName="ActivityTime" />
+          <ScalarProperty Name="ActivityProvince" ColumnName="ActivityProvince" />
+          <ScalarProperty Name="ActivityCity" ColumnName="ActivityCity" />
+          <ScalarProperty Name="ActivityServiceM" ColumnName="ActivityServiceM" />
+          <ScalarProperty Name="ActivityServiceD" ColumnName="ActivityServiceD" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+          <ScalarProperty Name="LastModTime" ColumnName="LastModTime" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="Concern" ColumnName="Concern" />
+          <ScalarProperty Name="QRCodeUrl" ColumnName="QRCodeUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ActivityComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ActivityComment">
+        <MappingFragment StoreEntitySet="NT_ActivityComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Admin">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Admin">
+        <MappingFragment StoreEntitySet="NT_Admin">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="TrueName" ColumnName="TrueName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+          <ScalarProperty Name="LastLoginIP" ColumnName="LastLoginIP" />
+          <ScalarProperty Name="LoginTimes" ColumnName="LoginTimes" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_AdminLog">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_AdminLog">
+        <MappingFragment StoreEntitySet="NT_AdminLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="LogIP" ColumnName="LogIP" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Album">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Album">
+        <MappingFragment StoreEntitySet="NT_Album">
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ImagesCount" ColumnName="ImagesCount" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          <ScalarProperty Name="LastUploadTime" ColumnName="LastUploadTime" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_APP_ProjectDocking">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_APP_ProjectDocking">
+        <MappingFragment StoreEntitySet="NT_APP_ProjectDocking">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="ProvinceID" ColumnName="ProvinceID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="ProjectTypeID" ColumnName="ProjectTypeID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="CommentCount" ColumnName="CommentCount" />
+          <ScalarProperty Name="TouchCount" ColumnName="TouchCount" />
+          <ScalarProperty Name="HotValue" ColumnName="HotValue" />
+          <ScalarProperty Name="ScoreValue" ColumnName="ScoreValue" />
+          <ScalarProperty Name="SumScoreValue" ColumnName="SumScoreValue" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_APP_ProjectDocking_Comment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_APP_ProjectDocking_Comment">
+        <MappingFragment StoreEntitySet="NT_APP_ProjectDocking_Comment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectDockingID" ColumnName="ProjectDockingID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+          <ScalarProperty Name="ScoreValue" ColumnName="ScoreValue" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_APP_ProjectDocking_Files">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_APP_ProjectDocking_Files">
+        <MappingFragment StoreEntitySet="NT_APP_ProjectDocking_Files">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="ProjectDockingID" ColumnName="ProjectDockingID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="MIME" ColumnName="MIME" />
+          <ScalarProperty Name="AbsPath" ColumnName="AbsPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_APP_Webtool">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_APP_Webtool">
+        <MappingFragment StoreEntitySet="NT_APP_Webtool">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="ProvinceID" ColumnName="ProvinceID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="HotValue" ColumnName="HotValue" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Blog">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Blog">
+        <MappingFragment StoreEntitySet="NT_Blog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+          <ScalarProperty Name="LastModTime" ColumnName="LastModTime" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="WebAdress" ColumnName="WebAdress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_BlogComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_BlogComment">
+        <MappingFragment StoreEntitySet="NT_BlogComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_BlogConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_BlogConcern">
+        <MappingFragment StoreEntitySet="NT_BlogConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_BlogDraft">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_BlogDraft">
+        <MappingFragment StoreEntitySet="NT_BlogDraft">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="LastModTime" ColumnName="LastModTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Board">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Board">
+        <MappingFragment StoreEntitySet="NT_Board">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_CardDrawText">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_CardDrawText">
+        <MappingFragment StoreEntitySet="NT_CardDrawText">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleEN" ColumnName="TitleEN" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="DefaultValueEN" ColumnName="DefaultValueEN" />
+          <ScalarProperty Name="FamliyName" ColumnName="FamliyName" />
+          <ScalarProperty Name="FontStyle" ColumnName="FontStyle" />
+          <ScalarProperty Name="FontSize" ColumnName="FontSize" />
+          <ScalarProperty Name="BackgroundColor" ColumnName="BackgroundColor" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="Warp" ColumnName="Warp" />
+          <ScalarProperty Name="FontColor" ColumnName="FontColor" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="TextLayout" ColumnName="TextLayout" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_CardTemplate">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_CardTemplate">
+        <MappingFragment StoreEntitySet="NT_CardTemplate">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AbsPathFace" ColumnName="AbsPathFace" />
+          <ScalarProperty Name="AbsPathBack" ColumnName="AbsPathBack" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleEN" ColumnName="TitleEN" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="RemarkEN" ColumnName="RemarkEN" />
+          <ScalarProperty Name="BarcodeHeight" ColumnName="BarcodeHeight" />
+          <ScalarProperty Name="BarcodeWidth" ColumnName="BarcodeWidth" />
+          <ScalarProperty Name="BarcodeX" ColumnName="BarcodeX" />
+          <ScalarProperty Name="BarcodeY" ColumnName="BarcodeY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ClnMessage">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ClnMessage">
+        <MappingFragment StoreEntitySet="NT_ClnMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SendId" ColumnName="SendId" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="isRead" ColumnName="isRead" />
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ContentEn" ColumnName="ContentEn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ClnMsgAdvLink">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ClnMsgAdvLink">
+        <MappingFragment StoreEntitySet="NT_ClnMsgAdvLink">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Href" ColumnName="Href" />
+          <ScalarProperty Name="InnerText" ColumnName="InnerText" />
+          <ScalarProperty Name="InnerTextEn" ColumnName="InnerTextEn" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleEn" ColumnName="TitleEn" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Company">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Company">
+        <MappingFragment StoreEntitySet="NT_Company">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+          <ScalarProperty Name="TargetType" ColumnName="TargetType" />
+          <ScalarProperty Name="ChildType" ColumnName="ChildType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_CurrencyPresent">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_CurrencyPresent">
+        <MappingFragment StoreEntitySet="NT_CurrencyPresent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Residue" ColumnName="Residue" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Dict_Area">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Dict_Area">
+        <MappingFragment StoreEntitySet="NT_Dict_Area">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Name_En" ColumnName="Name_En" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Dict_Language">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Dict_Language">
+        <MappingFragment StoreEntitySet="NT_Dict_Language">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Dict_Service">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Dict_Service">
+        <MappingFragment StoreEntitySet="NT_Dict_Service">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Name_En" ColumnName="Name_En" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Dict_Vocation">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Dict_Vocation">
+        <MappingFragment StoreEntitySet="NT_Dict_Vocation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VocName" ColumnName="VocName" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_DocumentType">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_DocumentType">
+        <MappingFragment StoreEntitySet="NT_DocumentType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameEn" ColumnName="NameEn" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_FeedBack">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_FeedBack">
+        <MappingFragment StoreEntitySet="NT_FeedBack">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ToID" ColumnName="ToID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_FeedBackComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_FeedBackComment">
+        <MappingFragment StoreEntitySet="NT_FeedBackComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AskID" ColumnName="AskID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_FeedBackConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_FeedBackConcern">
+        <MappingFragment StoreEntitySet="NT_FeedBackConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ForwardEmailBody">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ForwardEmailBody">
+        <MappingFragment StoreEntitySet="NT_ForwardEmailBody">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="SubjectEN" ColumnName="SubjectEN" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="BodyEN" ColumnName="BodyEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Friend">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Friend">
+        <MappingFragment StoreEntitySet="NT_Friend">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FriendID" ColumnName="FriendID" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_FriendDesc">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_FriendDesc">
+        <MappingFragment StoreEntitySet="NT_FriendDesc">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+          <ScalarProperty Name="Affirmant" ColumnName="Affirmant" />
+          <ScalarProperty Name="DescType" ColumnName="DescType" />
+          <ScalarProperty Name="Reply" ColumnName="Reply" />
+          <ScalarProperty Name="DescStartYear" ColumnName="DescStartYear" />
+          <ScalarProperty Name="DescEndYear" ColumnName="DescEndYear" />
+          <ScalarProperty Name="DescIsKnow" ColumnName="DescIsKnow" />
+          <ScalarProperty Name="DescText" ColumnName="DescText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_FriendInvite">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_FriendInvite">
+        <MappingFragment StoreEntitySet="NT_FriendInvite">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Invitee" ColumnName="Invitee" />
+          <ScalarProperty Name="Reply" ColumnName="Reply" />
+          <ScalarProperty Name="Postscript" ColumnName="Postscript" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+          <ScalarProperty Name="ReplyIP" ColumnName="ReplyIP" />
+          <ScalarProperty Name="ValidCode" ColumnName="ValidCode" />
+          <ScalarProperty Name="RealEmail" ColumnName="RealEmail" />
+          <ScalarProperty Name="RegUserID" ColumnName="RegUserID" />
+          <ScalarProperty Name="RealInviter" ColumnName="RealInviter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_GroupCompany">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_GroupCompany">
+        <MappingFragment StoreEntitySet="NT_GroupCompany">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="CompanyEn" ColumnName="CompanyEn" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="ShortNameEn" ColumnName="ShortNameEn" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Introduce" ColumnName="Introduce" />
+          <ScalarProperty Name="IntroduceEn" ColumnName="IntroduceEn" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="PX" ColumnName="PX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_GroupCooperation">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_GroupCooperation">
+        <MappingFragment StoreEntitySet="NT_GroupCooperation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_GroupMsg">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_GroupMsg">
+        <MappingFragment StoreEntitySet="NT_GroupMsg">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="ReceiverType" ColumnName="ReceiverType" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_GroupMsgRead">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_GroupMsgRead">
+        <MappingFragment StoreEntitySet="NT_GroupMsgRead">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="ReceiverType" ColumnName="ReceiverType" />
+          <ScalarProperty Name="LastReadMsgID" ColumnName="LastReadMsgID" />
+          <ScalarProperty Name="LastReadTime" ColumnName="LastReadTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Inbox">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Inbox">
+        <MappingFragment StoreEntitySet="NT_Inbox">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LetterID" ColumnName="LetterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Information">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Information">
+        <MappingFragment StoreEntitySet="NT_Information">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+          <ScalarProperty Name="LastModTime" ColumnName="LastModTime" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="WebAdress" ColumnName="WebAdress" />
+          <ScalarProperty Name="Concern" ColumnName="Concern" />
+          <ScalarProperty Name="ChildType" ColumnName="ChildType" />
+          <ScalarProperty Name="ShopIDList" ColumnName="ShopIDList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_InformationComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_InformationComment">
+        <MappingFragment StoreEntitySet="NT_InformationComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InformationID" ColumnName="InformationID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_LeadMan">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_LeadMan">
+        <MappingFragment StoreEntitySet="NT_LeadMan">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CN_Place" ColumnName="CN_Place" />
+          <ScalarProperty Name="CN_Places" ColumnName="CN_Places" />
+          <ScalarProperty Name="Point" ColumnName="Point" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Integral" ColumnName="Integral" />
+          <ScalarProperty Name="px" ColumnName="px" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_LeaveWord">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_LeaveWord">
+        <MappingFragment StoreEntitySet="NT_LeaveWord">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Letter">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Letter">
+        <MappingFragment StoreEntitySet="NT_Letter">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="IsReply" ColumnName="IsReply" />
+          <ScalarProperty Name="LtType" ColumnName="LtType" />
+          <ScalarProperty Name="RelativeID" ColumnName="RelativeID" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_MarketEmail">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_MarketEmail">
+        <MappingFragment StoreEntitySet="NT_MarketEmail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmailCount" ColumnName="EmailCount" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="isDel" ColumnName="isDel" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_MarketMobile">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_MarketMobile">
+        <MappingFragment StoreEntitySet="NT_MarketMobile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MobileCount" ColumnName="MobileCount" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="isDel" ColumnName="isDel" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_MarketSell">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_MarketSell">
+        <MappingFragment StoreEntitySet="NT_MarketSell">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MarketId" ColumnName="MarketId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+          <ScalarProperty Name="IsShare" ColumnName="IsShare" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="SellTime" ColumnName="SellTime" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_MarketSellExchange">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_MarketSellExchange">
+        <MappingFragment StoreEntitySet="NT_MarketSellExchange">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MySellId" ColumnName="MySellId" />
+          <ScalarProperty Name="TargetSellId" ColumnName="TargetSellId" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_NewsLetterEmail">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_NewsLetterEmail">
+        <MappingFragment StoreEntitySet="NT_NewsLetterEmail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_NewsLetterMobile">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_NewsLetterMobile">
+        <MappingFragment StoreEntitySet="NT_NewsLetterMobile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Notepad">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Notepad">
+        <MappingFragment StoreEntitySet="NT_Notepad">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="LastPostTime" ColumnName="LastPostTime" />
+          <ScalarProperty Name="LastPostIP" ColumnName="LastPostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Notice">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Notice">
+        <MappingFragment StoreEntitySet="NT_Notice">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="Correspond" ColumnName="Correspond" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OnlineUser">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OnlineUser">
+        <MappingFragment StoreEntitySet="NT_OnlineUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastIP" ColumnName="LastIP" />
+          <ScalarProperty Name="LastUrl" ColumnName="LastUrl" />
+          <ScalarProperty Name="LastTime" ColumnName="LastTime" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Order">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Order">
+        <MappingFragment StoreEntitySet="NT_Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderNO" ColumnName="OrderNO" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="RealPayMoney" ColumnName="RealPayMoney" />
+          <ScalarProperty Name="MoneyType" ColumnName="MoneyType" />
+          <ScalarProperty Name="TotalMoneyCNY" ColumnName="TotalMoneyCNY" />
+          <ScalarProperty Name="PayMoneyCNY" ColumnName="PayMoneyCNY" />
+          <ScalarProperty Name="RealPayMoneyCNY" ColumnName="RealPayMoneyCNY" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+          <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="OrderRemark" ColumnName="OrderRemark" />
+          <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OrderDets">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OrderDets">
+        <MappingFragment StoreEntitySet="NT_OrderDets">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProType" ColumnName="ProType" />
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="ProCount" ColumnName="ProCount" />
+          <ScalarProperty Name="PriceCNY" ColumnName="PriceCNY" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Outbox">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Outbox">
+        <MappingFragment StoreEntitySet="NT_Outbox">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LetterID" ColumnName="LetterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OutFriend">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OutFriend">
+        <MappingFragment StoreEntitySet="NT_OutFriend">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="IndustryId" ColumnName="IndustryId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="MSN" ColumnName="MSN" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="SKYPE" ColumnName="SKYPE" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CompanyUrl" ColumnName="CompanyUrl" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CustormType" ColumnName="CustormType" />
+          <ScalarProperty Name="RegUserID" ColumnName="RegUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OutFriendFile">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OutFriendFile">
+        <MappingFragment StoreEntitySet="NT_OutFriendFile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameMD5" ColumnName="NameMD5" />
+          <ScalarProperty Name="Introduce" ColumnName="Introduce" />
+          <ScalarProperty Name="DataCount" ColumnName="DataCount" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OutFriendSell">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OutFriendSell">
+        <MappingFragment StoreEntitySet="NT_OutFriendSell">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OutFriendSellExchange">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OutFriendSellExchange">
+        <MappingFragment StoreEntitySet="NT_OutFriendSellExchange">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MyFileId" ColumnName="MyFileId" />
+          <ScalarProperty Name="TargetFileId" ColumnName="TargetFileId" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Photo">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Photo">
+        <MappingFragment StoreEntitySet="NT_Photo">
+          <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="UploadUser" ColumnName="UploadUser" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="IsCover" ColumnName="IsCover" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="PhotoType" ColumnName="PhotoType" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_PhotoComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_PhotoComment">
+        <MappingFragment StoreEntitySet="NT_PhotoComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_PhotoConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_PhotoConcern">
+        <MappingFragment StoreEntitySet="NT_PhotoConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Recruit">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Recruit">
+        <MappingFragment StoreEntitySet="NT_Recruit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RecruitProvince" ColumnName="RecruitProvince" />
+          <ScalarProperty Name="RecruitCity" ColumnName="RecruitCity" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+          <ScalarProperty Name="LastModTime" ColumnName="LastModTime" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="Concern" ColumnName="Concern" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_RecruitComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_RecruitComment">
+        <MappingFragment StoreEntitySet="NT_RecruitComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RecruitID" ColumnName="RecruitID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Request">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Request">
+        <MappingFragment StoreEntitySet="NT_Request">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Demander" ColumnName="Demander" />
+          <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="ReplyResult" ColumnName="ReplyResult" />
+          <ScalarProperty Name="ReplyScript" ColumnName="ReplyScript" />
+          <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+          <ScalarProperty Name="ReplyIP" ColumnName="ReplyIP" />
+          <ScalarProperty Name="CorrespondInfo" ColumnName="CorrespondInfo" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Resource">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Resource">
+        <MappingFragment StoreEntitySet="NT_Resource">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ResourceProvince" ColumnName="ResourceProvince" />
+          <ScalarProperty Name="ResourceCity" ColumnName="ResourceCity" />
+          <ScalarProperty Name="ResourceServiceM" ColumnName="ResourceServiceM" />
+          <ScalarProperty Name="ResourceServiceD" ColumnName="ResourceServiceD" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+          <ScalarProperty Name="LastModTime" ColumnName="LastModTime" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ResourceComment">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ResourceComment">
+        <MappingFragment StoreEntitySet="NT_ResourceComment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ResourceConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ResourceConcern">
+        <MappingFragment StoreEntitySet="NT_ResourceConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_RetrievePwd">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_RetrievePwd">
+        <MappingFragment StoreEntitySet="NT_RetrievePwd">
+          <ScalarProperty Name="ValidCode" ColumnName="ValidCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ConfirmTime" ColumnName="ConfirmTime" />
+          <ScalarProperty Name="ConfirmIP" ColumnName="ConfirmIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Shop">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Shop">
+        <MappingFragment StoreEntitySet="NT_Shop">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="BigServiceId" ColumnName="BigServiceId" />
+          <ScalarProperty Name="SmallServiceId" ColumnName="SmallServiceId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="Concern" ColumnName="Concern" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="FileIdArray" ColumnName="FileIdArray" />
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+          <ScalarProperty Name="SimilarArray" ColumnName="SimilarArray" />
+          <ScalarProperty Name="TopicIDList" ColumnName="TopicIDList" />
+          <ScalarProperty Name="IsTop" ColumnName="IsTop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ShopFiles">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ShopFiles">
+        <MappingFragment StoreEntitySet="NT_ShopFiles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="MIME" ColumnName="MIME" />
+          <ScalarProperty Name="AbsPath" ColumnName="AbsPath" />
+          <ScalarProperty Name="SourcePath" ColumnName="SourcePath" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_SmtpMailPool">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_SmtpMailPool">
+        <MappingFragment StoreEntitySet="NT_SmtpMailPool">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="ErrorCount" ColumnName="ErrorCount" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="EnableSSL" ColumnName="EnableSSL" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="OnceCount" ColumnName="OnceCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_SpaceTemplate">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_SpaceTemplate">
+        <MappingFragment StoreEntitySet="NT_SpaceTemplate">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TName" ColumnName="TName" />
+          <ScalarProperty Name="TPath" ColumnName="TPath" />
+          <ScalarProperty Name="CreatTime" ColumnName="CreatTime" />
+          <ScalarProperty Name="TPicture" ColumnName="TPicture" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="IPoint" ColumnName="IPoint" />
+          <ScalarProperty Name="GPoint" ColumnName="GPoint" />
+          <ScalarProperty Name="isBG" ColumnName="isBG" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserNumber" ColumnName="UserNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_SX">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_SX">
+        <MappingFragment StoreEntitySet="NT_SX">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="RIS" ColumnName="RIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_SX_MD5">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_SX_MD5">
+        <MappingFragment StoreEntitySet="NT_SX_MD5">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MD5" ColumnName="MD5" />
+          <ScalarProperty Name="TxtLen" ColumnName="TxtLen" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_SysNotepad">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_SysNotepad">
+        <MappingFragment StoreEntitySet="NT_SysNotepad">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+          <ScalarProperty Name="ReplyContent" ColumnName="ReplyContent" />
+          <ScalarProperty Name="Replier" ColumnName="Replier" />
+          <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+          <ScalarProperty Name="ReplyIP" ColumnName="ReplyIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nt_ToVote">
+      <EntityTypeMapping TypeName="CLN20140830Model.Nt_ToVote">
+        <MappingFragment StoreEntitySet="Nt_ToVote">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="VoteID" ColumnName="VoteID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_User">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_User">
+        <MappingFragment StoreEntitySet="NT_User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+          <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+          <ScalarProperty Name="UserCompName" ColumnName="UserCompName" />
+          <ScalarProperty Name="UserCompAddr" ColumnName="UserCompAddr" />
+          <ScalarProperty Name="UserCompTel" ColumnName="UserCompTel" />
+          <ScalarProperty Name="UserCompFax" ColumnName="UserCompFax" />
+          <ScalarProperty Name="UserMobile" ColumnName="UserMobile" />
+          <ScalarProperty Name="UserWeb" ColumnName="UserWeb" />
+          <ScalarProperty Name="UserMSN" ColumnName="UserMSN" />
+          <ScalarProperty Name="UserQQ" ColumnName="UserQQ" />
+          <ScalarProperty Name="UserSKYPE" ColumnName="UserSKYPE" />
+          <ScalarProperty Name="UserJob" ColumnName="UserJob" />
+          <ScalarProperty Name="UserDiscount" ColumnName="UserDiscount" />
+          <ScalarProperty Name="UserService" ColumnName="UserService" />
+          <ScalarProperty Name="UserServices1" ColumnName="UserServices1" />
+          <ScalarProperty Name="UserServices2" ColumnName="UserServices2" />
+          <ScalarProperty Name="UserServices3" ColumnName="UserServices3" />
+          <ScalarProperty Name="UserServices4" ColumnName="UserServices4" />
+          <ScalarProperty Name="UserServices5" ColumnName="UserServices5" />
+          <ScalarProperty Name="UserLanguage1" ColumnName="UserLanguage1" />
+          <ScalarProperty Name="UserLanguage2" ColumnName="UserLanguage2" />
+          <ScalarProperty Name="UserLanguage3" ColumnName="UserLanguage3" />
+          <ScalarProperty Name="UserPro" ColumnName="UserPro" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+          <ScalarProperty Name="LastLoginIP" ColumnName="LastLoginIP" />
+          <ScalarProperty Name="LoginTimes" ColumnName="LoginTimes" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="RegTime" ColumnName="RegTime" />
+          <ScalarProperty Name="RegIP" ColumnName="RegIP" />
+          <ScalarProperty Name="Portrait" ColumnName="Portrait" />
+          <ScalarProperty Name="InviterID" ColumnName="InviterID" />
+          <ScalarProperty Name="VerifyCode" ColumnName="VerifyCode" />
+          <ScalarProperty Name="ConfirmTime" ColumnName="ConfirmTime" />
+          <ScalarProperty Name="Recommended" ColumnName="Recommended" />
+          <ScalarProperty Name="integral" ColumnName="integral" />
+          <ScalarProperty Name="inteyb" ColumnName="inteyb" />
+          <ScalarProperty Name="Kid" ColumnName="Kid" />
+          <ScalarProperty Name="Click" ColumnName="Click" />
+          <ScalarProperty Name="IsVip" ColumnName="IsVip" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="FriendPlaces" ColumnName="FriendPlaces" />
+          <ScalarProperty Name="OutFriends" ColumnName="OutFriends" />
+          <ScalarProperty Name="ClnCurrency" ColumnName="ClnCurrency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_UserInfo">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_UserInfo">
+        <MappingFragment StoreEntitySet="NT_UserInfo">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="BirthidayDisplay" ColumnName="BirthidayDisplay" />
+          <ScalarProperty Name="Constellation" ColumnName="Constellation" />
+          <ScalarProperty Name="MSN" ColumnName="MSN" />
+          <ScalarProperty Name="GTalk" ColumnName="GTalk" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="Skype" ColumnName="Skype" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="MobilePrivacy" ColumnName="MobilePrivacy" />
+          <ScalarProperty Name="EmailPrivacy" ColumnName="EmailPrivacy" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Addr" ColumnName="Addr" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="Favourite" ColumnName="Favourite" />
+          <ScalarProperty Name="FavMusics" ColumnName="FavMusics" />
+          <ScalarProperty Name="FavMovies" ColumnName="FavMovies" />
+          <ScalarProperty Name="FavCartoons" ColumnName="FavCartoons" />
+          <ScalarProperty Name="FavGames" ColumnName="FavGames" />
+          <ScalarProperty Name="FavSports" ColumnName="FavSports" />
+          <ScalarProperty Name="FavBooks" ColumnName="FavBooks" />
+          <ScalarProperty Name="FavAdages" ColumnName="FavAdages" />
+          <ScalarProperty Name="AppreciateMen" ColumnName="AppreciateMen" />
+          <ScalarProperty Name="Presentation" ColumnName="Presentation" />
+          <ScalarProperty Name="Vocation" ColumnName="Vocation" />
+          <ScalarProperty Name="HomeProv" ColumnName="HomeProv" />
+          <ScalarProperty Name="HomeCity" ColumnName="HomeCity" />
+          <ScalarProperty Name="MSNPrivacy" ColumnName="MSNPrivacy" />
+          <ScalarProperty Name="GTalkPrivacy" ColumnName="GTalkPrivacy" />
+          <ScalarProperty Name="QQPrivacy" ColumnName="QQPrivacy" />
+          <ScalarProperty Name="SkypePrivacy" ColumnName="SkypePrivacy" />
+          <ScalarProperty Name="TelPrivacy" ColumnName="TelPrivacy" />
+          <ScalarProperty Name="AddrPrivacy" ColumnName="AddrPrivacy" />
+          <ScalarProperty Name="WebSitePrivacy" ColumnName="WebSitePrivacy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_UserLog">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_UserLog">
+        <MappingFragment StoreEntitySet="NT_UserLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="LogIP" ColumnName="LogIP" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CorrespondInfo" ColumnName="CorrespondInfo" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+          <ScalarProperty Name="CorreUserID" ColumnName="CorreUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_UserPointHistory">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_UserPointHistory">
+        <MappingFragment StoreEntitySet="NT_UserPointHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Point" ColumnName="Point" />
+          <ScalarProperty Name="GPoint" ColumnName="GPoint" />
+          <ScalarProperty Name="UTF" ColumnName="UTF" />
+          <ScalarProperty Name="CreatTime" ColumnName="CreatTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_UserProps">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_UserProps">
+        <MappingFragment StoreEntitySet="NT_UserProps">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PropsID" ColumnName="PropsID" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Visit">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Visit">
+        <MappingFragment StoreEntitySet="NT_Visit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MasterID" ColumnName="MasterID" />
+          <ScalarProperty Name="VisitorID" ColumnName="VisitorID" />
+          <ScalarProperty Name="LastVisitTime" ColumnName="LastVisitTime" />
+          <ScalarProperty Name="LastVisitIP" ColumnName="LastVisitIP" />
+          <ScalarProperty Name="VisitTimes" ColumnName="VisitTimes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NTV_FriendDetail">
+      <EntityTypeMapping TypeName="CLN20140830Model.NTV_FriendDetail">
+        <MappingFragment StoreEntitySet="NTV_FriendDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FriendID" ColumnName="FriendID" />
+          <ScalarProperty Name="DescType" ColumnName="DescType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Order">
+      <EntityTypeMapping TypeName="CLN20140830Model.tb_Order">
+        <MappingFragment StoreEntitySet="tb_Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderNO" ColumnName="OrderNO" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="TotalMoneyCNY" ColumnName="TotalMoneyCNY" />
+          <ScalarProperty Name="PayMoneyCNY" ColumnName="PayMoneyCNY" />
+          <ScalarProperty Name="RealPayMoneyCNY" ColumnName="RealPayMoneyCNY" />
+          <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ActivityConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ActivityConcern">
+        <MappingFragment StoreEntitySet="NT_ActivityConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_CommentScore">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_CommentScore">
+        <MappingFragment StoreEntitySet="NT_CommentScore">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="GoodCount" ColumnName="GoodCount" />
+          <ScalarProperty Name="BadCount" ColumnName="BadCount" />
+          <ScalarProperty Name="AvgCount" ColumnName="AvgCount" />
+          <ScalarProperty Name="GoodSum" ColumnName="GoodSum" />
+          <ScalarProperty Name="BadSum" ColumnName="BadSum" />
+          <ScalarProperty Name="AvgSum" ColumnName="AvgSum" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_EmailNotify">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_EmailNotify">
+        <MappingFragment StoreEntitySet="NT_EmailNotify">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="Announce" ColumnName="Announce" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostIP" ColumnName="PostIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_InformationConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_InformationConcern">
+        <MappingFragment StoreEntitySet="NT_InformationConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_InformationScore">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_InformationScore">
+        <MappingFragment StoreEntitySet="NT_InformationScore">
+          <ScalarProperty Name="InformationId" ColumnName="InformationId" />
+          <ScalarProperty Name="GoodCount" ColumnName="GoodCount" />
+          <ScalarProperty Name="BadCount" ColumnName="BadCount" />
+          <ScalarProperty Name="AvgCount" ColumnName="AvgCount" />
+          <ScalarProperty Name="GoodSum" ColumnName="GoodSum" />
+          <ScalarProperty Name="BadSum" ColumnName="BadSum" />
+          <ScalarProperty Name="AvgSum" ColumnName="AvgSum" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_MarketData">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_MarketData">
+        <MappingFragment StoreEntitySet="NT_MarketData">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="EmailsCount" ColumnName="EmailsCount" />
+          <ScalarProperty Name="MobilesCount" ColumnName="MobilesCount" />
+          <ScalarProperty Name="FaxsCount" ColumnName="FaxsCount" />
+          <ScalarProperty Name="Emails" ColumnName="Emails" />
+          <ScalarProperty Name="Mobiles" ColumnName="Mobiles" />
+          <ScalarProperty Name="Faxs" ColumnName="Faxs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_MarketFax">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_MarketFax">
+        <MappingFragment StoreEntitySet="NT_MarketFax">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FaxCount" ColumnName="FaxCount" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="isDel" ColumnName="isDel" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_MarketSellLog">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_MarketSellLog">
+        <MappingFragment StoreEntitySet="NT_MarketSellLog">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SellId" ColumnName="SellId" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OutFriendFileContent">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OutFriendFileContent">
+        <MappingFragment StoreEntitySet="NT_OutFriendFileContent">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OutFriendFileId" ColumnName="OutFriendFileId" />
+          <ScalarProperty Name="OutFriendId" ColumnName="OutFriendId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_OutFriendSellLog">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_OutFriendSellLog">
+        <MappingFragment StoreEntitySet="NT_OutFriendSellLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OutFriendFileId" ColumnName="OutFriendFileId" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_RecruitConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_RecruitConcern">
+        <MappingFragment StoreEntitySet="NT_RecruitConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ShopConcern">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ShopConcern">
+        <MappingFragment StoreEntitySet="NT_ShopConcern">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsOpen" ColumnName="IsOpen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ShopFilesDownlog">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ShopFilesDownlog">
+        <MappingFragment StoreEntitySet="NT_ShopFilesDownlog">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+          <ScalarProperty Name="LastDownTime" ColumnName="LastDownTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ShopOrder">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ShopOrder">
+        <MappingFragment StoreEntitySet="NT_ShopOrder">
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_ShopScore">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_ShopScore">
+        <MappingFragment StoreEntitySet="NT_ShopScore">
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+          <ScalarProperty Name="GoodCount" ColumnName="GoodCount" />
+          <ScalarProperty Name="BadCount" ColumnName="BadCount" />
+          <ScalarProperty Name="AvgCount" ColumnName="AvgCount" />
+          <ScalarProperty Name="GoodSum" ColumnName="GoodSum" />
+          <ScalarProperty Name="BadSum" ColumnName="BadSum" />
+          <ScalarProperty Name="AvgSum" ColumnName="AvgSum" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_UserLoginExt">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_UserLoginExt">
+        <MappingFragment StoreEntitySet="NT_UserLoginExt">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SinaWBUID" ColumnName="SinaWBUID" />
+          <ScalarProperty Name="SinaName" ColumnName="SinaName" />
+          <ScalarProperty Name="SinaToken" ColumnName="SinaToken" />
+          <ScalarProperty Name="SinaAccessToken" ColumnName="SinaAccessToken" />
+          <ScalarProperty Name="SinaRefreshToken" ColumnName="SinaRefreshToken" />
+          <ScalarProperty Name="SinaUpdateTime" ColumnName="SinaUpdateTime" />
+          <ScalarProperty Name="SinaExpiresTime" ColumnName="SinaExpiresTime" />
+          <ScalarProperty Name="QQUID" ColumnName="QQUID" />
+          <ScalarProperty Name="QQName" ColumnName="QQName" />
+          <ScalarProperty Name="QQToken" ColumnName="QQToken" />
+          <ScalarProperty Name="QQAccessToken" ColumnName="QQAccessToken" />
+          <ScalarProperty Name="QQRefreshToken" ColumnName="QQRefreshToken" />
+          <ScalarProperty Name="QQUpdateTime" ColumnName="QQUpdateTime" />
+          <ScalarProperty Name="QQExpiresTime" ColumnName="QQExpiresTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_UserSetting">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_UserSetting">
+        <MappingFragment StoreEntitySet="NT_UserSetting">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PrivSpace" ColumnName="PrivSpace" />
+          <ScalarProperty Name="PrivFavourite" ColumnName="PrivFavourite" />
+          <ScalarProperty Name="PrivEducate" ColumnName="PrivEducate" />
+          <ScalarProperty Name="PrivLasso" ColumnName="PrivLasso" />
+          <ScalarProperty Name="PrivFriends" ColumnName="PrivFriends" />
+          <ScalarProperty Name="PrivLeaveWord" ColumnName="PrivLeaveWord" />
+          <ScalarProperty Name="PrivMiniBlog" ColumnName="PrivMiniBlog" />
+          <ScalarProperty Name="PrivShare" ColumnName="PrivShare" />
+          <ScalarProperty Name="PrivGroup" ColumnName="PrivGroup" />
+          <ScalarProperty Name="PrivMovies" ColumnName="PrivMovies" />
+          <ScalarProperty Name="ActUpdateData" ColumnName="ActUpdateData" />
+          <ScalarProperty Name="ActAddFriend" ColumnName="ActAddFriend" />
+          <ScalarProperty Name="ActLeaveWord" ColumnName="ActLeaveWord" />
+          <ScalarProperty Name="ActPicComment" ColumnName="ActPicComment" />
+          <ScalarProperty Name="ActSecede" ColumnName="ActSecede" />
+          <ScalarProperty Name="ActDeliver" ColumnName="ActDeliver" />
+          <ScalarProperty Name="ActLogComment" ColumnName="ActLogComment" />
+          <ScalarProperty Name="ActMovieComment" ColumnName="ActMovieComment" />
+          <ScalarProperty Name="ActPhotoLasso" ColumnName="ActPhotoLasso" />
+          <ScalarProperty Name="ActShareComment" ColumnName="ActShareComment" />
+          <ScalarProperty Name="LastPostTime" ColumnName="LastPostTime" />
+          <ScalarProperty Name="LastPostIP" ColumnName="LastPostIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NT_Visitor">
+      <EntityTypeMapping TypeName="CLN20140830Model.NT_Visitor">
+        <MappingFragment StoreEntitySet="NT_Visitor">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="VisitMeTotal" ColumnName="VisitMeTotal" />
+          <ScalarProperty Name="VisitOtherTotal" ColumnName="VisitOtherTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NTV_FriendDetailStat">
+      <EntityTypeMapping TypeName="CLN20140830Model.NTV_FriendDetailStat">
+        <MappingFragment StoreEntitySet="NTV_FriendDetailStat">
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+          <ScalarProperty Name="Affirmant" ColumnName="Affirmant" />
+          <ScalarProperty Name="DescType" ColumnName="DescType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opensocial_activity_media_items">
+      <EntityTypeMapping TypeName="CLN20140830Model.Opensocial_activity_media_items">
+        <MappingFragment StoreEntitySet="Opensocial_activity_media_items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="activity_id" ColumnName="activity_id" />
+          <ScalarProperty Name="mime_type" ColumnName="mime_type" />
+          <ScalarProperty Name="media_type" ColumnName="media_type" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_errorlog">
+      <EntityTypeMapping TypeName="CLN20140830Model.tb_errorlog">
+        <MappingFragment StoreEntitySet="tb_errorlog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="errorlog" ColumnName="errorlog" />
+          <ScalarProperty Name="errorTime" ColumnName="errorTime" />
+          <ScalarProperty Name="ErrorUrl" ColumnName="ErrorUrl" />
+          <ScalarProperty Name="ErrorIP" ColumnName="ErrorIP" />
+          <ScalarProperty Name="ErrorLevel" ColumnName="ErrorLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_CLN_Comment">
+      <EntityTypeMapping TypeName="CLN20140830Model.V_CLN_Comment">
+        <MappingFragment StoreEntitySet="V_CLN_Comment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="UserCompName" ColumnName="UserCompName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

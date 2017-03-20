@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14058A99-3934-4D38-90DF-4858E0DA6A93}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFForMSsql</RootNamespace>
+    <AssemblyName>EFForMSsql</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLN_AlertComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_Comment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_Email.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_Favorite.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_Friend.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_Group.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_GroupDiscuss.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_GroupMember.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_JieQiaHistory.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_ProjectType1.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_ProjectType2.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_Remark.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_RemarkShop.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_Resource.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_ResourceFiles.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLN_UserAuthorze.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBCLN.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCLN.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBCLN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBCLN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCLN.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NTV_FriendDetail.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NTV_FriendDetailStat.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_AccountLog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Activity.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ActivityComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ActivityConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Admin.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_AdminLog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Album.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_APP_ProjectDocking.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_APP_ProjectDocking_Comment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_APP_ProjectDocking_Files.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_APP_Webtool.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Blog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_BlogComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_BlogConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_BlogDraft.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Board.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_CardDrawText.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_CardTemplate.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ClnMessage.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ClnMsgAdvLink.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_CommentScore.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Company.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_CurrencyPresent.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Dict_Area.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Dict_Language.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Dict_Service.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Dict_Vocation.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_DocumentType.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_EmailNotify.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_FeedBack.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_FeedBackComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_FeedBackConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ForwardEmailBody.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Friend.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_FriendDesc.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_FriendInvite.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_GroupCompany.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_GroupCooperation.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_GroupMsg.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_GroupMsgRead.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Inbox.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Information.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_InformationComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_InformationConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_InformationScore.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_LeadMan.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_LeaveWord.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Letter.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_MarketData.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_MarketEmail.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_MarketFax.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_MarketMobile.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_MarketSell.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_MarketSellExchange.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_MarketSellLog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_NewsLetterEmail.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_NewsLetterMobile.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Notepad.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Notice.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OnlineUser.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Order.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OrderDets.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Outbox.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OutFriend.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OutFriendFile.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OutFriendFileContent.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OutFriendSell.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OutFriendSellExchange.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_OutFriendSellLog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Photo.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_PhotoComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_PhotoConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Recruit.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_RecruitComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_RecruitConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Request.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Resource.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ResourceComment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ResourceConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_RetrievePwd.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Shop.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ShopConcern.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ShopFiles.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ShopFilesDownlog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ShopOrder.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_ShopScore.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_SmtpMailPool.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_SpaceTemplate.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_SX.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_SX_MD5.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_SysNotepad.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nt_ToVote.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_User.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_UserInfo.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_UserLog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_UserLoginExt.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_UserPointHistory.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_UserProps.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_UserSetting.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Visit.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NT_Visitor.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Opensocial_activity_media_items.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tb_errorlog.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Order.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_CLN_Comment.cs">
+      <DependentUpon>DBCLN.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DBCLN.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBCLN.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBCLN.edmx.diagram">
+      <DependentUpon>DBCLN.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBCLN.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBCLN.edmx</DependentUpon>
+      <LastGenOutput>DBCLN.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBCLN.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBCLN.edmx</DependentUpon>
+      <LastGenOutput>DBCLN.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

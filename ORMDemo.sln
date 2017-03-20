@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFForMSsql", "EFForMSsql\EFForMSsql.csproj", "{14058A99-3934-4D38-90DF-4858E0DA6A93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperForsql", "DapperForsql\DapperForsql.csproj", "{6099300B-BC9F-4A1F-A945-D9A032B016B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetaPoco", "PetaPoco\PetaPoco.csproj", "{523C708E-C7E3-46F8-B894-2B1B08FBD62E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14058A99-3934-4D38-90DF-4858E0DA6A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14058A99-3934-4D38-90DF-4858E0DA6A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14058A99-3934-4D38-90DF-4858E0DA6A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14058A99-3934-4D38-90DF-4858E0DA6A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6099300B-BC9F-4A1F-A945-D9A032B016B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6099300B-BC9F-4A1F-A945-D9A032B016B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6099300B-BC9F-4A1F-A945-D9A032B016B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6099300B-BC9F-4A1F-A945-D9A032B016B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{523C708E-C7E3-46F8-B894-2B1B08FBD62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{523C708E-C7E3-46F8-B894-2B1B08FBD62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{523C708E-C7E3-46F8-B894-2B1B08FBD62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{523C708E-C7E3-46F8-B894-2B1B08FBD62E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

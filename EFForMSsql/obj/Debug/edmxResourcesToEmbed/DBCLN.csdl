@@ -1,0 +1,1942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CLN20140830Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CLN_AlertComment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AlertCommentId" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Adddate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CLN_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Target" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CLN_Email">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PassWord" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CLN_Favorite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FriendId" Type="Int32" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <Property Name="Adddate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CLN_Friend">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="FriendID" Type="Int32" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OutFriendID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupNameEn" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsOpen" Type="Int32" Nullable="false" />
+    <Property Name="Peoples" Type="Int32" Nullable="false" />
+    <Property Name="Rights" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="px" Type="Int32" Nullable="false" />
+    <Property Name="Discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DiscriptionEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Introduce" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IntroduceEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CoopSubmitCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_GroupDiscuss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ProvinceId" Type="Int32" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_GroupMember">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RelationUserId" Type="Int32" Nullable="false" />
+    <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="px" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_JieQiaHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResourceId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Addtime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CLN_ProjectType1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name_En" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_ProjectType2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name_En" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Remark">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="senderId" Type="Int32" Nullable="false" />
+    <Property Name="receiverId" Type="Int32" Nullable="false" />
+    <Property Name="remark" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="postTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="remarkId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_RemarkShop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShopId" Type="Int32" Nullable="false" />
+    <Property Name="Des" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CommentID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Resource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="Tel" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="ResourceProvince" Type="Int32" Nullable="false" />
+    <Property Name="ResourceCity" Type="Int32" Nullable="false" />
+    <Property Name="ResourceServiceM" Type="Int32" />
+    <Property Name="ResourceServiceD" Type="Int32" />
+    <Property Name="Type2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BussinessRule" Type="Int32" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="LastModTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="IsLock" Type="Int32" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="MD5" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChildType" Type="Int32" Nullable="false" />
+    <Property Name="FromType" Type="Int32" Nullable="false" />
+    <Property Name="FromData" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLN_ResourceFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ResourceID" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+    <Property Name="DownloadCount" Type="Int32" Nullable="false" />
+    <Property Name="UploadTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AbsPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_UserAuthorze">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="RuleType" Type="Int32" />
+    <Property Name="Rights" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Addtime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_AccountLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Operate" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="IsDel" Type="Boolean" Nullable="false" />
+    <Property Name="TargetId" Type="Int32" Nullable="false" />
+    <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LogIP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="ActivityTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ActivityProvince" Type="Int32" Nullable="false" />
+    <Property Name="ActivityCity" Type="Int32" Nullable="false" />
+    <Property Name="ActivityServiceM" Type="Int32" Nullable="false" />
+    <Property Name="ActivityServiceD" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="Privacy" Type="Int32" Nullable="false" />
+    <Property Name="PicPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="Concern" Type="Int32" Nullable="false" />
+    <Property Name="QRCodeUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_ActivityComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_Admin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoginName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TrueName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="LastLoginIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="LoginTimes" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_AdminLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminID" Type="Int32" Nullable="false" />
+    <Property Name="ActionType" Type="Int32" Nullable="false" />
+    <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LogIP" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Album">
+    <Key>
+      <PropertyRef Name="AlbumID" />
+    </Key>
+    <Property Name="AlbumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ImagesCount" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Privacy" Type="Int32" Nullable="false" />
+    <Property Name="LastUploadTime" Type="DateTime" Precision="3" />
+    <Property Name="GroupID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_APP_ProjectDocking">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tel" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="IndustryID" Type="Int32" Nullable="false" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="ProvinceID" Type="Int32" Nullable="false" />
+    <Property Name="CityID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ReadCount" Type="Int32" Nullable="false" />
+    <Property Name="CommentCount" Type="Int32" Nullable="false" />
+    <Property Name="TouchCount" Type="Int32" Nullable="false" />
+    <Property Name="HotValue" Type="Int32" Nullable="false" />
+    <Property Name="ScoreValue" Type="Int32" Nullable="false" />
+    <Property Name="SumScoreValue" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Addtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DownloadCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_APP_ProjectDocking_Comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectDockingID" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Addtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ScoreValue" Type="Int32" Nullable="false" />
+    <Property Name="IP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_APP_ProjectDocking_Files">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectDockingID" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+    <Property Name="DownloadCount" Type="Int32" Nullable="false" />
+    <Property Name="UploadTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AbsPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_APP_Webtool">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="IndustryID" Type="Int32" Nullable="false" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="ProvinceID" Type="Int32" Nullable="false" />
+    <Property Name="CityID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="1024" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ReadCount" Type="Int32" Nullable="false" />
+    <Property Name="HotValue" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Addtime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_Blog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="Privacy" Type="Int32" Nullable="false" />
+    <Property Name="PicPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="WebAdress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_BlogComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BlogID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_BlogConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_BlogDraft">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Privacy" Type="Int32" Nullable="false" />
+    <Property Name="PicPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="LastModTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_Board">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PostTime" Type="DateTime" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="IsLock" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="NT_CardDrawText">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="125" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TitleEN" Type="String" MaxLength="125" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DefaultValue" Type="String" MaxLength="125" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultValueEN" Type="String" MaxLength="125" FixedLength="false" Unicode="true" />
+    <Property Name="FamliyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FontStyle" Type="Int32" Nullable="false" />
+    <Property Name="FontSize" Type="Int32" Nullable="false" />
+    <Property Name="BackgroundColor" Type="Int32" Nullable="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="X" Type="Int32" Nullable="false" />
+    <Property Name="Y" Type="Int32" Nullable="false" />
+    <Property Name="Warp" Type="Boolean" Nullable="false" />
+    <Property Name="FontColor" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TextLayout" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_CardTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AbsPathFace" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AbsPathBack" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TitleEN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="RemarkEN" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="BarcodeHeight" Type="Int32" Nullable="false" />
+    <Property Name="BarcodeWidth" Type="Int32" Nullable="false" />
+    <Property Name="BarcodeX" Type="Int32" Nullable="false" />
+    <Property Name="BarcodeY" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_ClnMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="SendId" Type="Int32" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isRead" Type="Boolean" Nullable="false" />
+    <Property Name="TitleId" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContentEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_ClnMsgAdvLink">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Href" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InnerText" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InnerTextEn" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="TitleEn" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Company" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="Addtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TargetType" Type="Int32" Nullable="false" />
+    <Property Name="ChildType" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_CurrencyPresent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="Residue" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="Flag" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Area">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name_En" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Language">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name_En" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Vocation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VocName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_DocumentType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameEn" Type="String" MaxLength="125" FixedLength="false" Unicode="true" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_FeedBack">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ToID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="IsLock" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="NT_FeedBackComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AskID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_FeedBackConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_ForwardEmailBody">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SubjectEN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BodyEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_Friend">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="FriendID" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="Relation" Type="Int32" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_FriendDesc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Modifier" Type="Int32" Nullable="false" />
+    <Property Name="Affirmant" Type="Int32" Nullable="false" />
+    <Property Name="DescType" Type="Int32" Nullable="false" />
+    <Property Name="Reply" Type="Int32" Nullable="false" />
+    <Property Name="DescStartYear" Type="Int32" />
+    <Property Name="DescEndYear" Type="Int32" />
+    <Property Name="DescIsKnow" Type="Boolean" />
+    <Property Name="DescText" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_FriendInvite">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Method" Type="Int32" Nullable="false" />
+    <Property Name="Invitee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Reply" Type="Int32" Nullable="false" />
+    <Property Name="Postscript" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PostTime" Type="DateTime" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="ReplyTime" Type="DateTime" Precision="3" />
+    <Property Name="ReplyIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="ValidCode" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="RealEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegUserID" Type="Int32" />
+    <Property Name="RealInviter" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_GroupCompany">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="Company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShortNameEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Introduce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IntroduceEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Logo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="PX" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_GroupCooperation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tel" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Province" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_GroupMsg">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Receiver" Type="Int32" Nullable="false" />
+    <Property Name="ReceiverType" Type="Int32" Nullable="false" />
+    <Property Name="Sender" Type="Int32" Nullable="false" />
+    <Property Name="ContentID" Type="Int32" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MsgType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_GroupMsgRead">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Receiver" Type="Int32" Nullable="false" />
+    <Property Name="ReceiverType" Type="Int32" Nullable="false" />
+    <Property Name="LastReadMsgID" Type="Int32" Nullable="false" />
+    <Property Name="LastReadTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_Inbox">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="LetterID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Information">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="Privacy" Type="Int32" Nullable="false" />
+    <Property Name="PicPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="WebAdress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Concern" Type="Int32" Nullable="false" />
+    <Property Name="ChildType" Type="Int32" Nullable="false" />
+    <Property Name="ShopIDList" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_InformationComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InformationID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_LeadMan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Web" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="Int32" />
+    <Property Name="City" Type="Int32" />
+    <Property Name="CN_Place" Type="Int32" />
+    <Property Name="CN_Places" Type="Int32" />
+    <Property Name="Point" Type="Int32" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Integral" Type="Int32" Nullable="false" />
+    <Property Name="px" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_LeaveWord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sender" Type="Int32" Nullable="false" />
+    <Property Name="Receiver" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Letter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sender" Type="Int32" Nullable="false" />
+    <Property Name="Receiver" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TopicID" Type="Int32" Nullable="false" />
+    <Property Name="IsReply" Type="Boolean" Nullable="false" />
+    <Property Name="LtType" Type="Int32" Nullable="false" />
+    <Property Name="RelativeID" Type="Int32" />
+    <Property Name="IsRead" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_MarketEmail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="EmailCount" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="isDel" Type="Boolean" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_MarketMobile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="MobileCount" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="isDel" Type="Boolean" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_MarketSell">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="MarketId" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="DownloadCount" Type="Int32" Nullable="false" />
+    <Property Name="IsShare" Type="Boolean" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="SellTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_MarketSellExchange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="MySellId" Type="Int32" Nullable="false" />
+    <Property Name="TargetSellId" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_NewsLetterEmail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_NewsLetterMobile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_Notepad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="LastPostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Notice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Receiver" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsRead" Type="Boolean" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Sender" Type="Int32" />
+    <Property Name="MsgType" Type="Int32" Nullable="false" />
+    <Property Name="Correspond" Type="Int32" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="IsDel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OnlineUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="LastIP" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="LastUrl" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LastTime" Type="DateTime" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_Order">
+    <Key>
+      <PropertyRef Name="OrderNO" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="OrderType" Type="Int32" Nullable="false" />
+    <Property Name="TotalMoney" Type="Decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="PayMoney" Type="Decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="RealPayMoney" Type="Decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="MoneyType" Type="Int32" Nullable="false" />
+    <Property Name="TotalMoneyCNY" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="PayMoneyCNY" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="RealPayMoneyCNY" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Addtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PayTime" Type="DateTime" Precision="3" />
+    <Property Name="DeliveryTime" Type="DateTime" Precision="3" />
+    <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+    <Property Name="PayType" Type="Int32" Nullable="false" />
+    <Property Name="OrderStatus" Type="Int32" Nullable="false" />
+    <Property Name="OrderRemark" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ClientIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_OrderDets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="ProType" Type="Int32" Nullable="false" />
+    <Property Name="ProID" Type="Int32" Nullable="false" />
+    <Property Name="ProCount" Type="Int32" Nullable="false" />
+    <Property Name="PriceCNY" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Outbox">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="LetterID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriend">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="ProvinceId" Type="Int32" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="IndustryId" Type="Int32" />
+    <Property Name="ServiceId" Type="Int32" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QQ" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SKYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="CustormType" Type="Int32" Nullable="false" />
+    <Property Name="RegUserID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameMD5" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Introduce" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DataCount" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendSell">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="525" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendSellExchange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="MyFileId" Type="Int32" Nullable="false" />
+    <Property Name="TargetFileId" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_Photo">
+    <Key>
+      <PropertyRef Name="PhotoID" />
+    </Key>
+    <Property Name="PhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AlbumID" Type="Int32" Nullable="false" />
+    <Property Name="UploadUser" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Views" Type="Int32" Nullable="false" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="IsCover" Type="Boolean" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="PhotoType" Type="Int32" Nullable="false" />
+    <Property Name="Width" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="FilePath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_PhotoComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PhotoID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_PhotoConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_Recruit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="RecruitProvince" Type="Int32" Nullable="false" />
+    <Property Name="RecruitCity" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="Privacy" Type="Int32" Nullable="false" />
+    <Property Name="PicPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="Concern" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_RecruitComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecruitID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_Request">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Receiver" Type="Int32" Nullable="false" />
+    <Property Name="Demander" Type="Int32" Nullable="false" />
+    <Property Name="RequestType" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ReplyResult" Type="Int32" Nullable="false" />
+    <Property Name="ReplyScript" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ReplyTime" Type="DateTime" Precision="3" />
+    <Property Name="ReplyIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="CorrespondInfo" Type="Int32" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="IsDel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Resource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="ResourceProvince" Type="Int32" Nullable="false" />
+    <Property Name="ResourceCity" Type="Int32" Nullable="false" />
+    <Property Name="ResourceServiceM" Type="Int32" Nullable="false" />
+    <Property Name="ResourceServiceD" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="Comments" Type="Int32" Nullable="false" />
+    <Property Name="Privacy" Type="Int32" Nullable="false" />
+    <Property Name="PicPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastModTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_ResourceComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResourceID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_ResourceConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_RetrievePwd">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ValidCode" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="ConfirmTime" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_Shop">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Discount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostTime" Type="DateTime" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="IsLock" Type="Boolean" />
+    <Property Name="ProvinceId" Type="Int32" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="BigServiceId" Type="Int32" />
+    <Property Name="SmallServiceId" Type="Int32" />
+    <Property Name="Remarks" Type="Int32" Nullable="false" />
+    <Property Name="Reads" Type="Int32" Nullable="false" />
+    <Property Name="Concern" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="FileId" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" Nullable="false" />
+    <Property Name="FileIdArray" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="LanguageID" Type="Int32" Nullable="false" />
+    <Property Name="SimilarArray" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="TopicIDList" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="IsTop" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="NT_ShopFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+    <Property Name="DownloadCount" Type="Int32" Nullable="false" />
+    <Property Name="UploadTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FileType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AbsPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SourcePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_SmtpMailPool">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Host" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Port" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="ErrorCount" Type="Int32" Nullable="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EnableSSL" Type="Boolean" Nullable="false" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OnceCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_SpaceTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TPicture" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsLock" Type="Byte" Nullable="false" />
+    <Property Name="IPoint" Type="Int32" />
+    <Property Name="GPoint" Type="Int32" />
+    <Property Name="isBG" Type="Byte" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="UserNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_SX">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Receiver" Type="Int32" Nullable="false" />
+    <Property Name="Sender" Type="Int32" Nullable="false" />
+    <Property Name="ContentID" Type="Int32" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IsRead" Type="Boolean" Nullable="false" />
+    <Property Name="RIS" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_SX_MD5">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MD5" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TxtLen" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_SysNotepad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ReplyContent" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Replier" Type="Int32" />
+    <Property Name="ReplyTime" Type="DateTime" Precision="3" />
+    <Property Name="ReplyIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Nt_ToVote">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="VoteID" Type="Int32" />
+    <Property Name="OptionID" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NT_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserGender" Type="Int32" Nullable="false" />
+    <Property Name="UserAge" Type="Int32" Nullable="false" />
+    <Property Name="UserCompName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCompAddr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCompTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCompFax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserWeb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserMSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserQQ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserSKYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserJob" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserDiscount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserService" Type="Int32" Nullable="false" />
+    <Property Name="UserServices1" Type="Int32" Nullable="false" />
+    <Property Name="UserServices2" Type="Int32" Nullable="false" />
+    <Property Name="UserServices3" Type="Int32" Nullable="false" />
+    <Property Name="UserServices4" Type="Int32" Nullable="false" />
+    <Property Name="UserServices5" Type="Int32" Nullable="false" />
+    <Property Name="UserLanguage1" Type="Int32" Nullable="false" />
+    <Property Name="UserLanguage2" Type="Int32" Nullable="false" />
+    <Property Name="UserLanguage3" Type="Int32" Nullable="false" />
+    <Property Name="UserPro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="LastLoginIP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="LoginTimes" Type="Int32" Nullable="false" />
+    <Property Name="Province" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <Property Name="RegTime" Type="DateTime" Precision="3" />
+    <Property Name="RegIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="Portrait" Type="Int32" />
+    <Property Name="InviterID" Type="Int32" />
+    <Property Name="VerifyCode" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="ConfirmTime" Type="DateTime" Precision="3" />
+    <Property Name="Recommended" Type="Boolean" />
+    <Property Name="integral" Type="Int32" />
+    <Property Name="inteyb" Type="Int32" />
+    <Property Name="Kid" Type="Int32" />
+    <Property Name="Click" Type="Int32" />
+    <Property Name="IsVip" Type="Boolean" Nullable="false" />
+    <Property Name="UserType" Type="Int32" Nullable="false" />
+    <Property Name="FriendPlaces" Type="Int32" Nullable="false" />
+    <Property Name="OutFriends" Type="Int32" Nullable="false" />
+    <Property Name="ClnCurrency" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_UserInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="BirthidayDisplay" Type="Int32" />
+    <Property Name="Constellation" Type="Int32" />
+    <Property Name="MSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GTalk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Skype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePrivacy" Type="Int32" />
+    <Property Name="EmailPrivacy" Type="Int32" />
+    <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Addr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Favourite" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FavMusics" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FavMovies" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FavCartoons" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FavGames" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FavSports" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FavBooks" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FavAdages" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AppreciateMen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Presentation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Vocation" Type="Int32" />
+    <Property Name="HomeProv" Type="Int32" />
+    <Property Name="HomeCity" Type="Int32" />
+    <Property Name="MSNPrivacy" Type="Int32" />
+    <Property Name="GTalkPrivacy" Type="Int32" />
+    <Property Name="QQPrivacy" Type="Int32" />
+    <Property Name="SkypePrivacy" Type="Int32" />
+    <Property Name="TelPrivacy" Type="Int32" />
+    <Property Name="AddrPrivacy" Type="Int32" />
+    <Property Name="WebSitePrivacy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_UserLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ActionType" Type="Int32" Nullable="false" />
+    <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LogIP" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CorrespondInfo" Type="Int32" />
+    <Property Name="IsLock" Type="Boolean" Nullable="false" />
+    <Property Name="IsDel" Type="Boolean" Nullable="false" />
+    <Property Name="CorreUserID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_UserPointHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Point" Type="Int32" />
+    <Property Name="GPoint" Type="Int32" />
+    <Property Name="UTF" Type="Byte" />
+    <Property Name="CreatTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_UserProps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="PropsID" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NT_Visit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MasterID" Type="Int32" Nullable="false" />
+    <Property Name="VisitorID" Type="Int32" Nullable="false" />
+    <Property Name="LastVisitTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastVisitIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="VisitTimes" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTV_FriendDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="FriendID" Type="Int32" Nullable="false" />
+    <Property Name="DescType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="OrderType" Type="Int32" Nullable="false" />
+    <Property Name="TotalMoneyCNY" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayMoneyCNY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RealPayMoneyCNY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Addtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PayTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+    <Property Name="PayType" Type="Int32" Nullable="false" />
+    <Property Name="OrderStatus" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_ActivityConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_CommentScore">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="GoodCount" />
+      <PropertyRef Name="BadCount" />
+      <PropertyRef Name="AvgCount" />
+      <PropertyRef Name="GoodSum" />
+      <PropertyRef Name="BadSum" />
+      <PropertyRef Name="AvgSum" />
+      <PropertyRef Name="Score" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="GoodCount" Type="Int32" Nullable="false" />
+    <Property Name="BadCount" Type="Int32" Nullable="false" />
+    <Property Name="AvgCount" Type="Int32" Nullable="false" />
+    <Property Name="GoodSum" Type="Int32" Nullable="false" />
+    <Property Name="BadSum" Type="Int32" Nullable="false" />
+    <Property Name="AvgSum" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_EmailNotify">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ItemID" />
+      <PropertyRef Name="Announce" />
+      <PropertyRef Name="PostTime" />
+      <PropertyRef Name="PostIP" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="Announce" Type="Boolean" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_InformationConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_InformationScore">
+    <Key>
+      <PropertyRef Name="InformationId" />
+      <PropertyRef Name="GoodCount" />
+      <PropertyRef Name="BadCount" />
+      <PropertyRef Name="AvgCount" />
+      <PropertyRef Name="GoodSum" />
+      <PropertyRef Name="BadSum" />
+      <PropertyRef Name="AvgSum" />
+      <PropertyRef Name="Score" />
+    </Key>
+    <Property Name="InformationId" Type="Int32" Nullable="false" />
+    <Property Name="GoodCount" Type="Int32" Nullable="false" />
+    <Property Name="BadCount" Type="Int32" Nullable="false" />
+    <Property Name="AvgCount" Type="Int32" Nullable="false" />
+    <Property Name="GoodSum" Type="Int32" Nullable="false" />
+    <Property Name="BadSum" Type="Int32" Nullable="false" />
+    <Property Name="AvgSum" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_MarketData">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UpdateTime" />
+      <PropertyRef Name="EmailsCount" />
+      <PropertyRef Name="MobilesCount" />
+      <PropertyRef Name="FaxsCount" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EmailsCount" Type="Int32" Nullable="false" />
+    <Property Name="MobilesCount" Type="Int32" Nullable="false" />
+    <Property Name="FaxsCount" Type="Int32" Nullable="false" />
+    <Property Name="Emails" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Mobiles" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Faxs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_MarketFax">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="FaxCount" />
+      <PropertyRef Name="Flag" />
+      <PropertyRef Name="isDel" />
+      <PropertyRef Name="AddTime" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FaxCount" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="isDel" Type="Boolean" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NT_MarketSellLog">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="SellId" />
+      <PropertyRef Name="LogTime" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="SellId" Type="Int32" Nullable="false" />
+    <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendFileContent">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="OutFriendFileId" />
+      <PropertyRef Name="OutFriendId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OutFriendFileId" Type="Int32" Nullable="false" />
+    <Property Name="OutFriendId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendSellLog">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="OutFriendFileId" />
+      <PropertyRef Name="AddTime" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OutFriendFileId" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_RecruitConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_ShopConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="IsOpen" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="addTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="IsOpen" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_ShopFilesDownlog">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="DownloadCount" />
+      <PropertyRef Name="LastDownTime" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ShopId" Type="Int32" Nullable="false" />
+    <Property Name="DownloadCount" Type="Int32" Nullable="false" />
+    <Property Name="LastDownTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_ShopOrder">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Flag" />
+      <PropertyRef Name="AddTime" />
+    </Key>
+    <Property Name="ShopId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_ShopScore">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="GoodCount" />
+      <PropertyRef Name="BadCount" />
+      <PropertyRef Name="AvgCount" />
+      <PropertyRef Name="GoodSum" />
+      <PropertyRef Name="BadSum" />
+      <PropertyRef Name="AvgSum" />
+      <PropertyRef Name="Score" />
+    </Key>
+    <Property Name="ShopId" Type="Int32" Nullable="false" />
+    <Property Name="GoodCount" Type="Int32" Nullable="false" />
+    <Property Name="BadCount" Type="Int32" Nullable="false" />
+    <Property Name="AvgCount" Type="Int32" Nullable="false" />
+    <Property Name="GoodSum" Type="Int32" Nullable="false" />
+    <Property Name="BadSum" Type="Int32" Nullable="false" />
+    <Property Name="AvgSum" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_UserLoginExt">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="SinaUpdateTime" />
+      <PropertyRef Name="SinaExpiresTime" />
+      <PropertyRef Name="QQUpdateTime" />
+      <PropertyRef Name="QQExpiresTime" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="SinaWBUID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SinaName" Type="String" MaxLength="255" FixedLength="true" Unicode="false" />
+    <Property Name="SinaToken" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="SinaAccessToken" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="SinaRefreshToken" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="SinaUpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SinaExpiresTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="QQUID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QQName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="QQToken" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="QQAccessToken" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="QQRefreshToken" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="QQUpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="QQExpiresTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NT_UserSetting">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="PrivSpace" />
+      <PropertyRef Name="PrivFavourite" />
+      <PropertyRef Name="PrivEducate" />
+      <PropertyRef Name="PrivLasso" />
+      <PropertyRef Name="PrivFriends" />
+      <PropertyRef Name="PrivLeaveWord" />
+      <PropertyRef Name="PrivMiniBlog" />
+      <PropertyRef Name="PrivShare" />
+      <PropertyRef Name="PrivGroup" />
+      <PropertyRef Name="PrivMovies" />
+      <PropertyRef Name="ActUpdateData" />
+      <PropertyRef Name="ActAddFriend" />
+      <PropertyRef Name="ActLeaveWord" />
+      <PropertyRef Name="ActPicComment" />
+      <PropertyRef Name="ActSecede" />
+      <PropertyRef Name="ActDeliver" />
+      <PropertyRef Name="ActLogComment" />
+      <PropertyRef Name="ActMovieComment" />
+      <PropertyRef Name="ActPhotoLasso" />
+      <PropertyRef Name="ActShareComment" />
+      <PropertyRef Name="LastPostTime" />
+      <PropertyRef Name="LastPostIP" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="PrivSpace" Type="Int32" Nullable="false" />
+    <Property Name="PrivFavourite" Type="Int32" Nullable="false" />
+    <Property Name="PrivEducate" Type="Int32" Nullable="false" />
+    <Property Name="PrivLasso" Type="Int32" Nullable="false" />
+    <Property Name="PrivFriends" Type="Int32" Nullable="false" />
+    <Property Name="PrivLeaveWord" Type="Int32" Nullable="false" />
+    <Property Name="PrivMiniBlog" Type="Int32" Nullable="false" />
+    <Property Name="PrivShare" Type="Int32" Nullable="false" />
+    <Property Name="PrivGroup" Type="Int32" Nullable="false" />
+    <Property Name="PrivMovies" Type="Int32" Nullable="false" />
+    <Property Name="ActUpdateData" Type="Boolean" Nullable="false" />
+    <Property Name="ActAddFriend" Type="Boolean" Nullable="false" />
+    <Property Name="ActLeaveWord" Type="Boolean" Nullable="false" />
+    <Property Name="ActPicComment" Type="Boolean" Nullable="false" />
+    <Property Name="ActSecede" Type="Boolean" Nullable="false" />
+    <Property Name="ActDeliver" Type="Boolean" Nullable="false" />
+    <Property Name="ActLogComment" Type="Boolean" Nullable="false" />
+    <Property Name="ActMovieComment" Type="Boolean" Nullable="false" />
+    <Property Name="ActPhotoLasso" Type="Boolean" Nullable="false" />
+    <Property Name="ActShareComment" Type="Boolean" Nullable="false" />
+    <Property Name="LastPostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPostIP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Visitor">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="VisitMeTotal" />
+      <PropertyRef Name="VisitOtherTotal" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="VisitMeTotal" Type="Int64" Nullable="false" />
+    <Property Name="VisitOtherTotal" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTV_FriendDetailStat">
+    <Key>
+      <PropertyRef Name="Modifier" />
+      <PropertyRef Name="Affirmant" />
+      <PropertyRef Name="DescType" />
+    </Key>
+    <Property Name="Modifier" Type="Int32" Nullable="false" />
+    <Property Name="Affirmant" Type="Int32" Nullable="false" />
+    <Property Name="DescType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Opensocial_activity_media_items">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="activity_id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="activity_id" Type="Int32" Nullable="false" />
+    <Property Name="mime_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="media_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tb_errorlog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="errorlog" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="errorTime" Type="DateTime" Precision="3" />
+    <Property Name="ErrorUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorLevel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="V_CLN_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Target" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Comment" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="AddDate" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Target" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="AddDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCompName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CLNContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CLN_AlertComment" EntityType="Self.CLN_AlertComment" />
+    <EntitySet Name="CLN_Comment" EntityType="Self.CLN_Comment" />
+    <EntitySet Name="CLN_Email" EntityType="Self.CLN_Email" />
+    <EntitySet Name="CLN_Favorite" EntityType="Self.CLN_Favorite" />
+    <EntitySet Name="CLN_Friend" EntityType="Self.CLN_Friend" />
+    <EntitySet Name="CLN_Group" EntityType="Self.CLN_Group" />
+    <EntitySet Name="CLN_GroupDiscuss" EntityType="Self.CLN_GroupDiscuss" />
+    <EntitySet Name="CLN_GroupMember" EntityType="Self.CLN_GroupMember" />
+    <EntitySet Name="CLN_JieQiaHistory" EntityType="Self.CLN_JieQiaHistory" />
+    <EntitySet Name="CLN_ProjectType1" EntityType="Self.CLN_ProjectType1" />
+    <EntitySet Name="CLN_ProjectType2" EntityType="Self.CLN_ProjectType2" />
+    <EntitySet Name="CLN_Remark" EntityType="Self.CLN_Remark" />
+    <EntitySet Name="CLN_RemarkShop" EntityType="Self.CLN_RemarkShop" />
+    <EntitySet Name="CLN_Resource" EntityType="Self.CLN_Resource" />
+    <EntitySet Name="CLN_ResourceFiles" EntityType="Self.CLN_ResourceFiles" />
+    <EntitySet Name="CLN_UserAuthorze" EntityType="Self.CLN_UserAuthorze" />
+    <EntitySet Name="NT_AccountLog" EntityType="Self.NT_AccountLog" />
+    <EntitySet Name="NT_Activity" EntityType="Self.NT_Activity" />
+    <EntitySet Name="NT_ActivityComment" EntityType="Self.NT_ActivityComment" />
+    <EntitySet Name="NT_Admin" EntityType="Self.NT_Admin" />
+    <EntitySet Name="NT_AdminLog" EntityType="Self.NT_AdminLog" />
+    <EntitySet Name="NT_Album" EntityType="Self.NT_Album" />
+    <EntitySet Name="NT_APP_ProjectDocking" EntityType="Self.NT_APP_ProjectDocking" />
+    <EntitySet Name="NT_APP_ProjectDocking_Comment" EntityType="Self.NT_APP_ProjectDocking_Comment" />
+    <EntitySet Name="NT_APP_ProjectDocking_Files" EntityType="Self.NT_APP_ProjectDocking_Files" />
+    <EntitySet Name="NT_APP_Webtool" EntityType="Self.NT_APP_Webtool" />
+    <EntitySet Name="NT_Blog" EntityType="Self.NT_Blog" />
+    <EntitySet Name="NT_BlogComment" EntityType="Self.NT_BlogComment" />
+    <EntitySet Name="NT_BlogConcern" EntityType="Self.NT_BlogConcern" />
+    <EntitySet Name="NT_BlogDraft" EntityType="Self.NT_BlogDraft" />
+    <EntitySet Name="NT_Board" EntityType="Self.NT_Board" />
+    <EntitySet Name="NT_CardDrawText" EntityType="Self.NT_CardDrawText" />
+    <EntitySet Name="NT_CardTemplate" EntityType="Self.NT_CardTemplate" />
+    <EntitySet Name="NT_ClnMessage" EntityType="Self.NT_ClnMessage" />
+    <EntitySet Name="NT_ClnMsgAdvLink" EntityType="Self.NT_ClnMsgAdvLink" />
+    <EntitySet Name="NT_Company" EntityType="Self.NT_Company" />
+    <EntitySet Name="NT_CurrencyPresent" EntityType="Self.NT_CurrencyPresent" />
+    <EntitySet Name="NT_Dict_Area" EntityType="Self.NT_Dict_Area" />
+    <EntitySet Name="NT_Dict_Language" EntityType="Self.NT_Dict_Language" />
+    <EntitySet Name="NT_Dict_Service" EntityType="Self.NT_Dict_Service" />
+    <EntitySet Name="NT_Dict_Vocation" EntityType="Self.NT_Dict_Vocation" />
+    <EntitySet Name="NT_DocumentType" EntityType="Self.NT_DocumentType" />
+    <EntitySet Name="NT_FeedBack" EntityType="Self.NT_FeedBack" />
+    <EntitySet Name="NT_FeedBackComment" EntityType="Self.NT_FeedBackComment" />
+    <EntitySet Name="NT_FeedBackConcern" EntityType="Self.NT_FeedBackConcern" />
+    <EntitySet Name="NT_ForwardEmailBody" EntityType="Self.NT_ForwardEmailBody" />
+    <EntitySet Name="NT_Friend" EntityType="Self.NT_Friend" />
+    <EntitySet Name="NT_FriendDesc" EntityType="Self.NT_FriendDesc" />
+    <EntitySet Name="NT_FriendInvite" EntityType="Self.NT_FriendInvite" />
+    <EntitySet Name="NT_GroupCompany" EntityType="Self.NT_GroupCompany" />
+    <EntitySet Name="NT_GroupCooperation" EntityType="Self.NT_GroupCooperation" />
+    <EntitySet Name="NT_GroupMsg" EntityType="Self.NT_GroupMsg" />
+    <EntitySet Name="NT_GroupMsgRead" EntityType="Self.NT_GroupMsgRead" />
+    <EntitySet Name="NT_Inbox" EntityType="Self.NT_Inbox" />
+    <EntitySet Name="NT_Information" EntityType="Self.NT_Information" />
+    <EntitySet Name="NT_InformationComment" EntityType="Self.NT_InformationComment" />
+    <EntitySet Name="NT_LeadMan" EntityType="Self.NT_LeadMan" />
+    <EntitySet Name="NT_LeaveWord" EntityType="Self.NT_LeaveWord" />
+    <EntitySet Name="NT_Letter" EntityType="Self.NT_Letter" />
+    <EntitySet Name="NT_MarketEmail" EntityType="Self.NT_MarketEmail" />
+    <EntitySet Name="NT_MarketMobile" EntityType="Self.NT_MarketMobile" />
+    <EntitySet Name="NT_MarketSell" EntityType="Self.NT_MarketSell" />
+    <EntitySet Name="NT_MarketSellExchange" EntityType="Self.NT_MarketSellExchange" />
+    <EntitySet Name="NT_NewsLetterEmail" EntityType="Self.NT_NewsLetterEmail" />
+    <EntitySet Name="NT_NewsLetterMobile" EntityType="Self.NT_NewsLetterMobile" />
+    <EntitySet Name="NT_Notepad" EntityType="Self.NT_Notepad" />
+    <EntitySet Name="NT_Notice" EntityType="Self.NT_Notice" />
+    <EntitySet Name="NT_OnlineUser" EntityType="Self.NT_OnlineUser" />
+    <EntitySet Name="NT_Order" EntityType="Self.NT_Order" />
+    <EntitySet Name="NT_OrderDets" EntityType="Self.NT_OrderDets" />
+    <EntitySet Name="NT_Outbox" EntityType="Self.NT_Outbox" />
+    <EntitySet Name="NT_OutFriend" EntityType="Self.NT_OutFriend" />
+    <EntitySet Name="NT_OutFriendFile" EntityType="Self.NT_OutFriendFile" />
+    <EntitySet Name="NT_OutFriendSell" EntityType="Self.NT_OutFriendSell" />
+    <EntitySet Name="NT_OutFriendSellExchange" EntityType="Self.NT_OutFriendSellExchange" />
+    <EntitySet Name="NT_Photo" EntityType="Self.NT_Photo" />
+    <EntitySet Name="NT_PhotoComment" EntityType="Self.NT_PhotoComment" />
+    <EntitySet Name="NT_PhotoConcern" EntityType="Self.NT_PhotoConcern" />
+    <EntitySet Name="NT_Recruit" EntityType="Self.NT_Recruit" />
+    <EntitySet Name="NT_RecruitComment" EntityType="Self.NT_RecruitComment" />
+    <EntitySet Name="NT_Request" EntityType="Self.NT_Request" />
+    <EntitySet Name="NT_Resource" EntityType="Self.NT_Resource" />
+    <EntitySet Name="NT_ResourceComment" EntityType="Self.NT_ResourceComment" />
+    <EntitySet Name="NT_ResourceConcern" EntityType="Self.NT_ResourceConcern" />
+    <EntitySet Name="NT_RetrievePwd" EntityType="Self.NT_RetrievePwd" />
+    <EntitySet Name="NT_Shop" EntityType="Self.NT_Shop" />
+    <EntitySet Name="NT_ShopFiles" EntityType="Self.NT_ShopFiles" />
+    <EntitySet Name="NT_SmtpMailPool" EntityType="Self.NT_SmtpMailPool" />
+    <EntitySet Name="NT_SpaceTemplate" EntityType="Self.NT_SpaceTemplate" />
+    <EntitySet Name="NT_SX" EntityType="Self.NT_SX" />
+    <EntitySet Name="NT_SX_MD5" EntityType="Self.NT_SX_MD5" />
+    <EntitySet Name="NT_SysNotepad" EntityType="Self.NT_SysNotepad" />
+    <EntitySet Name="Nt_ToVote" EntityType="Self.Nt_ToVote" />
+    <EntitySet Name="NT_User" EntityType="Self.NT_User" />
+    <EntitySet Name="NT_UserInfo" EntityType="Self.NT_UserInfo" />
+    <EntitySet Name="NT_UserLog" EntityType="Self.NT_UserLog" />
+    <EntitySet Name="NT_UserPointHistory" EntityType="Self.NT_UserPointHistory" />
+    <EntitySet Name="NT_UserProps" EntityType="Self.NT_UserProps" />
+    <EntitySet Name="NT_Visit" EntityType="Self.NT_Visit" />
+    <EntitySet Name="NTV_FriendDetail" EntityType="Self.NTV_FriendDetail" />
+    <EntitySet Name="tb_Order" EntityType="Self.tb_Order" />
+    <EntitySet Name="NT_ActivityConcern" EntityType="Self.NT_ActivityConcern" />
+    <EntitySet Name="NT_CommentScore" EntityType="Self.NT_CommentScore" />
+    <EntitySet Name="NT_EmailNotify" EntityType="Self.NT_EmailNotify" />
+    <EntitySet Name="NT_InformationConcern" EntityType="Self.NT_InformationConcern" />
+    <EntitySet Name="NT_InformationScore" EntityType="Self.NT_InformationScore" />
+    <EntitySet Name="NT_MarketData" EntityType="Self.NT_MarketData" />
+    <EntitySet Name="NT_MarketFax" EntityType="Self.NT_MarketFax" />
+    <EntitySet Name="NT_MarketSellLog" EntityType="Self.NT_MarketSellLog" />
+    <EntitySet Name="NT_OutFriendFileContent" EntityType="Self.NT_OutFriendFileContent" />
+    <EntitySet Name="NT_OutFriendSellLog" EntityType="Self.NT_OutFriendSellLog" />
+    <EntitySet Name="NT_RecruitConcern" EntityType="Self.NT_RecruitConcern" />
+    <EntitySet Name="NT_ShopConcern" EntityType="Self.NT_ShopConcern" />
+    <EntitySet Name="NT_ShopFilesDownlog" EntityType="Self.NT_ShopFilesDownlog" />
+    <EntitySet Name="NT_ShopOrder" EntityType="Self.NT_ShopOrder" />
+    <EntitySet Name="NT_ShopScore" EntityType="Self.NT_ShopScore" />
+    <EntitySet Name="NT_UserLoginExt" EntityType="Self.NT_UserLoginExt" />
+    <EntitySet Name="NT_UserSetting" EntityType="Self.NT_UserSetting" />
+    <EntitySet Name="NT_Visitor" EntityType="Self.NT_Visitor" />
+    <EntitySet Name="NTV_FriendDetailStat" EntityType="Self.NTV_FriendDetailStat" />
+    <EntitySet Name="Opensocial_activity_media_items" EntityType="Self.Opensocial_activity_media_items" />
+    <EntitySet Name="tb_errorlog" EntityType="Self.tb_errorlog" />
+    <EntitySet Name="V_CLN_Comment" EntityType="Self.V_CLN_Comment" />
+  </EntityContainer>
+</Schema>

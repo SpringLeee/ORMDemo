@@ -1,0 +1,5 @@
+C:\Users\asus\documents\visual studio 2013\Projects\ORMDemo\PetaPoco\bin\Debug\PetaPoco.exe.config
+C:\Users\asus\documents\visual studio 2013\Projects\ORMDemo\PetaPoco\bin\Debug\PetaPoco.exe
+C:\Users\asus\documents\visual studio 2013\Projects\ORMDemo\PetaPoco\bin\Debug\PetaPoco.pdb
+C:\Users\asus\documents\visual studio 2013\Projects\ORMDemo\PetaPoco\obj\Debug\PetaPoco.exe
+C:\Users\asus\documents\visual studio 2013\Projects\ORMDemo\PetaPoco\obj\Debug\PetaPoco.pdb

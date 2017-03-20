@@ -1,0 +1,8 @@
+c:\users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\bin\Debug\DapperForsql.exe.config
+c:\users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\bin\Debug\DapperForsql.exe
+c:\users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\bin\Debug\DapperForsql.pdb
+c:\users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\bin\Debug\Dapper.dll
+c:\users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\bin\Debug\Dapper.xml
+c:\users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\obj\Debug\DapperForsql.exe
+c:\users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\obj\Debug\DapperForsql.pdb
+C:\Users\asus\documents\visual studio 2013\Projects\ORMDemo\DapperForsql\obj\Debug\DapperForsql.csprojResolveAssemblyReference.cache

@@ -1,0 +1,2252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CLN20140830Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLN_AlertComment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlertCommentId" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="text" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Adddate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Target" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="text" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Email">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="PassWord" Type="varchar" MaxLength="400" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="CLN_Favorite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FriendId" Type="int" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="Adddate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Friend">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="FriendID" Type="int" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="OutFriendID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="GroupNameEn" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IsOpen" Type="int" Nullable="false" />
+    <Property Name="Peoples" Type="int" Nullable="false" />
+    <Property Name="Rights" Type="text" />
+    <Property Name="px" Type="int" Nullable="false" />
+    <Property Name="Discription" Type="text" Nullable="false" />
+    <Property Name="DiscriptionEn" Type="text" Nullable="false" />
+    <Property Name="Introduce" Type="text" />
+    <Property Name="IntroduceEn" Type="text" />
+    <Property Name="CoopSubmitCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_GroupDiscuss">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="ProvinceId" Type="int" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="Company" Type="varchar" MaxLength="50" />
+    <Property Name="Content" Type="text" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="CommentID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_GroupMember">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RelationUserId" Type="int" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="px" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_JieQiaHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Addtime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_ProjectType1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name_En" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_ProjectType2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name_En" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Remark">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="senderId" Type="int" Nullable="false" />
+    <Property Name="receiverId" Type="int" Nullable="false" />
+    <Property Name="remark" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="content" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="postTime" Type="datetime" Nullable="false" />
+    <Property Name="remarkId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_RemarkShop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShopId" Type="int" Nullable="false" />
+    <Property Name="Des" Type="text" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="10" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="CommentID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_Resource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="Tel" Type="varchar" MaxLength="350" />
+    <Property Name="Name" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="ResourceProvince" Type="int" Nullable="false" />
+    <Property Name="ResourceCity" Type="int" Nullable="false" />
+    <Property Name="ResourceServiceM" Type="int" />
+    <Property Name="ResourceServiceD" Type="int" />
+    <Property Name="Type2" Type="varchar" MaxLength="50" />
+    <Property Name="Type3" Type="varchar" MaxLength="50" />
+    <Property Name="Company" Type="nvarchar" MaxLength="250" />
+    <Property Name="BussinessRule" Type="int" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="LastModTime" Type="datetime" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="IsLock" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="MD5" Type="varchar" MaxLength="32" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="ChildType" Type="int" Nullable="false" />
+    <Property Name="FromType" Type="int" Nullable="false" />
+    <Property Name="FromData" Type="varchar" MaxLength="256" />
+    <Property Name="Title" Type="varchar" MaxLength="256" />
+    <Property Name="Url" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="CLN_ResourceFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="ResourceID" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FileSize" Type="int" Nullable="false" />
+    <Property Name="DownloadCount" Type="int" Nullable="false" />
+    <Property Name="UploadTime" Type="datetime" Nullable="false" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MIME" Type="varchar" MaxLength="50" />
+    <Property Name="AbsPath" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLN_UserAuthorze">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="RuleType" Type="int" />
+    <Property Name="Rights" Type="varchar" MaxLength="200" />
+    <Property Name="Addtime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NT_AccountLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Operate" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="IsDel" Type="bit" Nullable="false" />
+    <Property Name="TargetId" Type="int" Nullable="false" />
+    <Property Name="LogTime" Type="datetime" Nullable="false" />
+    <Property Name="LogIP" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="NT_Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="ActivityTime" Type="datetime" Nullable="false" />
+    <Property Name="ActivityProvince" Type="int" Nullable="false" />
+    <Property Name="ActivityCity" Type="int" Nullable="false" />
+    <Property Name="ActivityServiceM" Type="int" Nullable="false" />
+    <Property Name="ActivityServiceD" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Privacy" Type="int" Nullable="false" />
+    <Property Name="PicPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastModTime" Type="datetime" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="Concern" Type="int" Nullable="false" />
+    <Property Name="QRCodeUrl" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="NT_ActivityComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="CommentID" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_ActivityConcern”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_ActivityConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Admin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TrueName" Type="nvarchar" MaxLength="20" />
+    <Property Name="Password" Type="char" MaxLength="32" />
+    <Property Name="LastLoginTime" Type="datetime" />
+    <Property Name="LastLoginIP" Type="char" MaxLength="15" />
+    <Property Name="LoginTimes" Type="int" Nullable="false" />
+    <Property Name="State" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_AdminLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminID" Type="int" Nullable="false" />
+    <Property Name="ActionType" Type="int" Nullable="false" />
+    <Property Name="LogTime" Type="datetime" Nullable="false" />
+    <Property Name="LogIP" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Album">
+    <Key>
+      <PropertyRef Name="AlbumID" />
+    </Key>
+    <Property Name="AlbumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="ImagesCount" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Privacy" Type="int" Nullable="false" />
+    <Property Name="LastUploadTime" Type="datetime" />
+    <Property Name="GroupID" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_APP_ProjectDocking">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="IndustryID" Type="int" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="ProvinceID" Type="int" Nullable="false" />
+    <Property Name="CityID" Type="int" Nullable="false" />
+    <Property Name="ProjectTypeID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="ReadCount" Type="int" Nullable="false" />
+    <Property Name="CommentCount" Type="int" Nullable="false" />
+    <Property Name="TouchCount" Type="int" Nullable="false" />
+    <Property Name="HotValue" Type="int" Nullable="false" />
+    <Property Name="ScoreValue" Type="int" Nullable="false" />
+    <Property Name="SumScoreValue" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Addtime" Type="datetime" Nullable="false" />
+    <Property Name="IP" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DownloadCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_APP_ProjectDocking_Comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectDockingID" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="Addtime" Type="datetime" Nullable="false" />
+    <Property Name="ScoreValue" Type="int" Nullable="false" />
+    <Property Name="IP" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_APP_ProjectDocking_Files">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="ProjectDockingID" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FileSize" Type="int" Nullable="false" />
+    <Property Name="DownloadCount" Type="int" Nullable="false" />
+    <Property Name="UploadTime" Type="datetime" Nullable="false" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MIME" Type="varchar" MaxLength="50" />
+    <Property Name="AbsPath" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_APP_Webtool">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="IndustryID" Type="int" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="ProvinceID" Type="int" Nullable="false" />
+    <Property Name="CityID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="Url" Type="char" MaxLength="1024" Nullable="false" />
+    <Property Name="ReadCount" Type="int" Nullable="false" />
+    <Property Name="HotValue" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Addtime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Blog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Privacy" Type="int" Nullable="false" />
+    <Property Name="PicPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastModTime" Type="datetime" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="WebAdress" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NT_BlogComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BlogID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="CommentID" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_BlogConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_BlogDraft">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="Privacy" Type="int" Nullable="false" />
+    <Property Name="PicPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="LastModTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Board">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="PostTime" Type="datetime" />
+    <Property Name="PostIP" Type="char" MaxLength="15" />
+    <Property Name="IsLock" Type="bit" />
+  </EntityType>
+  <EntityType Name="NT_CardDrawText">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="125" Nullable="false" />
+    <Property Name="TitleEN" Type="nvarchar" MaxLength="125" Nullable="false" />
+    <Property Name="DefaultValue" Type="nvarchar" MaxLength="125" />
+    <Property Name="DefaultValueEN" Type="nvarchar" MaxLength="125" />
+    <Property Name="FamliyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FontStyle" Type="int" Nullable="false" />
+    <Property Name="FontSize" Type="int" Nullable="false" />
+    <Property Name="BackgroundColor" Type="int" Nullable="false" />
+    <Property Name="Width" Type="int" Nullable="false" />
+    <Property Name="Height" Type="int" Nullable="false" />
+    <Property Name="X" Type="int" Nullable="false" />
+    <Property Name="Y" Type="int" Nullable="false" />
+    <Property Name="Warp" Type="bit" Nullable="false" />
+    <Property Name="FontColor" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="TextLayout" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_CardTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AbsPathFace" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="AbsPathBack" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Width" Type="int" Nullable="false" />
+    <Property Name="Height" Type="int" Nullable="false" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TitleEN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1024" />
+    <Property Name="RemarkEN" Type="nvarchar" MaxLength="1024" />
+    <Property Name="BarcodeHeight" Type="int" Nullable="false" />
+    <Property Name="BarcodeWidth" Type="int" Nullable="false" />
+    <Property Name="BarcodeX" Type="int" Nullable="false" />
+    <Property Name="BarcodeY" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_ClnMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="SendId" Type="int" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="isRead" Type="bit" Nullable="false" />
+    <Property Name="TitleId" Type="int" />
+    <Property Name="Title" Type="ntext" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="ContentEn" Type="ntext" />
+  </EntityType>
+  <EntityType Name="NT_ClnMsgAdvLink">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Href" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="InnerText" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="InnerTextEn" Type="nvarchar" MaxLength="512" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="512" />
+    <Property Name="TitleEn" Type="nvarchar" MaxLength="512" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_CommentScore”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_CommentScore">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="GoodCount" />
+      <PropertyRef Name="BadCount" />
+      <PropertyRef Name="AvgCount" />
+      <PropertyRef Name="GoodSum" />
+      <PropertyRef Name="BadSum" />
+      <PropertyRef Name="AvgSum" />
+      <PropertyRef Name="Score" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="GoodCount" Type="int" Nullable="false" />
+    <Property Name="BadCount" Type="int" Nullable="false" />
+    <Property Name="AvgCount" Type="int" Nullable="false" />
+    <Property Name="GoodSum" Type="int" Nullable="false" />
+    <Property Name="BadSum" Type="int" Nullable="false" />
+    <Property Name="AvgSum" Type="int" Nullable="false" />
+    <Property Name="Score" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+    <Property Name="Addtime" Type="datetime" Nullable="false" />
+    <Property Name="TargetType" Type="int" Nullable="false" />
+    <Property Name="ChildType" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="NT_CurrencyPresent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Residue" Type="int" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="Flag" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Area">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name_En" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Language">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Name_En" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Dict_Vocation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VocName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_DocumentType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="125" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_EmailNotify”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_EmailNotify">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ItemID" />
+      <PropertyRef Name="Announce" />
+      <PropertyRef Name="PostTime" />
+      <PropertyRef Name="PostIP" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="Announce" Type="bit" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_FeedBack">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ToID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="ntext" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" />
+    <Property Name="PostIP" Type="char" MaxLength="15" />
+    <Property Name="IsLock" Type="bit" />
+  </EntityType>
+  <EntityType Name="NT_FeedBackComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AskID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_FeedBackConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_ForwardEmailBody">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="255" />
+    <Property Name="SubjectEN" Type="nvarchar" MaxLength="255" />
+    <Property Name="Body" Type="ntext" />
+    <Property Name="BodyEN" Type="ntext" />
+  </EntityType>
+  <EntityType Name="NT_Friend">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="FriendID" Type="int" Nullable="false" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="Relation" Type="int" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_FriendDesc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modifier" Type="int" Nullable="false" />
+    <Property Name="Affirmant" Type="int" Nullable="false" />
+    <Property Name="DescType" Type="int" Nullable="false" />
+    <Property Name="Reply" Type="int" Nullable="false" />
+    <Property Name="DescStartYear" Type="int" />
+    <Property Name="DescEndYear" Type="int" />
+    <Property Name="DescIsKnow" Type="bit" />
+    <Property Name="DescText" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="NT_FriendInvite">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Method" Type="int" Nullable="false" />
+    <Property Name="Invitee" Type="nvarchar" MaxLength="100" />
+    <Property Name="Reply" Type="int" Nullable="false" />
+    <Property Name="Postscript" Type="nvarchar" MaxLength="255" />
+    <Property Name="PostTime" Type="datetime" />
+    <Property Name="PostIP" Type="char" MaxLength="15" />
+    <Property Name="ReplyTime" Type="datetime" />
+    <Property Name="ReplyIP" Type="char" MaxLength="15" />
+    <Property Name="ValidCode" Type="char" MaxLength="11" />
+    <Property Name="RealEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegUserID" Type="int" />
+    <Property Name="RealInviter" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_GroupCompany">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="Company" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompanyEn" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShortName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShortNameEn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="100" />
+    <Property Name="Introduce" Type="ntext" />
+    <Property Name="IntroduceEn" Type="ntext" />
+    <Property Name="Url" Type="varchar" MaxLength="250" />
+    <Property Name="Logo" Type="varchar" MaxLength="250" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="PX" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_GroupCooperation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="Province" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_GroupMsg">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Receiver" Type="int" Nullable="false" />
+    <Property Name="ReceiverType" Type="int" Nullable="false" />
+    <Property Name="Sender" Type="int" Nullable="false" />
+    <Property Name="ContentID" Type="int" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="MsgType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_GroupMsgRead">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Receiver" Type="int" Nullable="false" />
+    <Property Name="ReceiverType" Type="int" Nullable="false" />
+    <Property Name="LastReadMsgID" Type="int" Nullable="false" />
+    <Property Name="LastReadTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Inbox">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="LetterID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Information">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Privacy" Type="int" Nullable="false" />
+    <Property Name="PicPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastModTime" Type="datetime" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="WebAdress" Type="varchar" MaxLength="255" />
+    <Property Name="Concern" Type="int" Nullable="false" />
+    <Property Name="ChildType" Type="int" Nullable="false" />
+    <Property Name="ShopIDList" Type="varchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="NT_InformationComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InformationID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="CommentID" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_InformationConcern”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_InformationConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_InformationScore”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_InformationScore">
+    <Key>
+      <PropertyRef Name="InformationId" />
+      <PropertyRef Name="GoodCount" />
+      <PropertyRef Name="BadCount" />
+      <PropertyRef Name="AvgCount" />
+      <PropertyRef Name="GoodSum" />
+      <PropertyRef Name="BadSum" />
+      <PropertyRef Name="AvgSum" />
+      <PropertyRef Name="Score" />
+    </Key>
+    <Property Name="InformationId" Type="int" Nullable="false" />
+    <Property Name="GoodCount" Type="int" Nullable="false" />
+    <Property Name="BadCount" Type="int" Nullable="false" />
+    <Property Name="AvgCount" Type="int" Nullable="false" />
+    <Property Name="GoodSum" Type="int" Nullable="false" />
+    <Property Name="BadSum" Type="int" Nullable="false" />
+    <Property Name="AvgSum" Type="int" Nullable="false" />
+    <Property Name="Score" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_LeadMan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Web" Type="varchar" MaxLength="128" />
+    <Property Name="Summary" Type="ntext" />
+    <Property Name="Province" Type="int" />
+    <Property Name="City" Type="int" />
+    <Property Name="CN_Place" Type="int" />
+    <Property Name="CN_Places" Type="int" />
+    <Property Name="Point" Type="int" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Integral" Type="int" Nullable="false" />
+    <Property Name="px" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_LeaveWord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="int" Nullable="false" />
+    <Property Name="Receiver" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Letter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="int" Nullable="false" />
+    <Property Name="Receiver" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="TopicID" Type="int" Nullable="false" />
+    <Property Name="IsReply" Type="bit" Nullable="false" />
+    <Property Name="LtType" Type="int" Nullable="false" />
+    <Property Name="RelativeID" Type="int" />
+    <Property Name="IsRead" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_MarketData”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_MarketData">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UpdateTime" />
+      <PropertyRef Name="EmailsCount" />
+      <PropertyRef Name="MobilesCount" />
+      <PropertyRef Name="FaxsCount" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="EmailsCount" Type="int" Nullable="false" />
+    <Property Name="MobilesCount" Type="int" Nullable="false" />
+    <Property Name="FaxsCount" Type="int" Nullable="false" />
+    <Property Name="Emails" Type="text" />
+    <Property Name="Mobiles" Type="text" />
+    <Property Name="Faxs" Type="text" />
+  </EntityType>
+  <EntityType Name="NT_MarketEmail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="EmailCount" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+    <Property Name="isDel" Type="bit" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="text" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_MarketFax”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_MarketFax">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="FaxCount" />
+      <PropertyRef Name="Flag" />
+      <PropertyRef Name="isDel" />
+      <PropertyRef Name="AddTime" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FaxCount" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+    <Property Name="isDel" Type="bit" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="text" />
+  </EntityType>
+  <EntityType Name="NT_MarketMobile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="MobileCount" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+    <Property Name="isDel" Type="bit" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="text" />
+  </EntityType>
+  <EntityType Name="NT_MarketSell">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="MarketId" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="DownloadCount" Type="int" Nullable="false" />
+    <Property Name="IsShare" Type="bit" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="SellTime" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="NT_MarketSellExchange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="MySellId" Type="int" Nullable="false" />
+    <Property Name="TargetSellId" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_MarketSellLog”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_MarketSellLog">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="SellId" />
+      <PropertyRef Name="LogTime" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="SellId" Type="int" Nullable="false" />
+    <Property Name="LogTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_NewsLetterEmail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_NewsLetterMobile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Notepad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="4000" />
+    <Property Name="LastPostTime" Type="datetime" Nullable="false" />
+    <Property Name="LastPostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Notice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Receiver" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="Sender" Type="int" />
+    <Property Name="MsgType" Type="int" Nullable="false" />
+    <Property Name="Correspond" Type="int" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="IsDel" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OnlineUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="LastIP" Type="nvarchar" MaxLength="18" />
+    <Property Name="LastUrl" Type="nvarchar" MaxLength="256" />
+    <Property Name="LastTime" Type="datetime" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NT_Order">
+    <Key>
+      <PropertyRef Name="OrderNO" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="OrderType" Type="int" Nullable="false" />
+    <Property Name="TotalMoney" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="RealPayMoney" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="MoneyType" Type="int" Nullable="false" />
+    <Property Name="TotalMoneyCNY" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="PayMoneyCNY" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="RealPayMoneyCNY" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="Addtime" Type="datetime" Nullable="false" />
+    <Property Name="PayTime" Type="datetime" />
+    <Property Name="DeliveryTime" Type="datetime" />
+    <Property Name="ExpireTime" Type="datetime" />
+    <Property Name="PayType" Type="int" Nullable="false" />
+    <Property Name="OrderStatus" Type="int" Nullable="false" />
+    <Property Name="OrderRemark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ClientIP" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NT_OrderDets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="ProType" Type="int" Nullable="false" />
+    <Property Name="ProID" Type="int" Nullable="false" />
+    <Property Name="ProCount" Type="int" Nullable="false" />
+    <Property Name="PriceCNY" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Outbox">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="LetterID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriend">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="ProvinceId" Type="int" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="IndustryId" Type="int" />
+    <Property Name="ServiceId" Type="int" />
+    <Property Name="Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="20" />
+    <Property Name="MSN" Type="nvarchar" MaxLength="50" />
+    <Property Name="QQ" Type="nvarchar" MaxLength="10" />
+    <Property Name="SKYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remark" Type="ntext" />
+    <Property Name="CompanyUrl" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="CustormType" Type="int" Nullable="false" />
+    <Property Name="RegUserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NameMD5" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="Introduce" Type="nvarchar" MaxLength="500" />
+    <Property Name="DataCount" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_OutFriendFileContent”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_OutFriendFileContent">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="OutFriendFileId" />
+      <PropertyRef Name="OutFriendId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="OutFriendFileId" Type="int" Nullable="false" />
+    <Property Name="OutFriendId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendSell">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="525" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_OutFriendSellExchange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="MyFileId" Type="int" Nullable="false" />
+    <Property Name="TargetFileId" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_OutFriendSellLog”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_OutFriendSellLog">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="OutFriendFileId" />
+      <PropertyRef Name="AddTime" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="OutFriendFileId" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Photo">
+    <Key>
+      <PropertyRef Name="PhotoID" />
+    </Key>
+    <Property Name="PhotoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlbumID" Type="int" Nullable="false" />
+    <Property Name="UploadUser" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="FileSize" Type="int" Nullable="false" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="IsCover" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="PhotoType" Type="int" Nullable="false" />
+    <Property Name="Width" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_PhotoComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PhotoID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="CommentID" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_PhotoConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Recruit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="RecruitProvince" Type="int" Nullable="false" />
+    <Property Name="RecruitCity" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Privacy" Type="int" Nullable="false" />
+    <Property Name="PicPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastModTime" Type="datetime" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="Concern" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_RecruitComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecruitID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="CommentID" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_RecruitConcern”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_RecruitConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Request">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Receiver" Type="int" Nullable="false" />
+    <Property Name="Demander" Type="int" Nullable="false" />
+    <Property Name="RequestType" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="255" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="ReplyResult" Type="int" Nullable="false" />
+    <Property Name="ReplyScript" Type="nvarchar" MaxLength="255" />
+    <Property Name="ReplyTime" Type="datetime" />
+    <Property Name="ReplyIP" Type="char" MaxLength="15" />
+    <Property Name="CorrespondInfo" Type="int" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="IsDel" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Resource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="ResourceProvince" Type="int" Nullable="false" />
+    <Property Name="ResourceCity" Type="int" Nullable="false" />
+    <Property Name="ResourceServiceM" Type="int" Nullable="false" />
+    <Property Name="ResourceServiceD" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="int" Nullable="false" />
+    <Property Name="Privacy" Type="int" Nullable="false" />
+    <Property Name="PicPath" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastModTime" Type="datetime" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="NT_ResourceComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="CommentID" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_ResourceConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_RetrievePwd">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ValidCode" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="ConfirmTime" Type="datetime" />
+    <Property Name="ConfirmIP" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="NT_Shop">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="Price1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Discount" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostTime" Type="datetime" />
+    <Property Name="PostIP" Type="char" MaxLength="15" />
+    <Property Name="IsLock" Type="bit" />
+    <Property Name="ProvinceId" Type="int" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="BigServiceId" Type="int" />
+    <Property Name="SmallServiceId" Type="int" />
+    <Property Name="Remarks" Type="int" Nullable="false" />
+    <Property Name="Reads" Type="int" Nullable="false" />
+    <Property Name="Concern" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="FileId" Type="int" />
+    <Property Name="DocumentType" Type="int" Nullable="false" />
+    <Property Name="FileIdArray" Type="varchar" MaxLength="4000" />
+    <Property Name="LanguageID" Type="int" Nullable="false" />
+    <Property Name="SimilarArray" Type="varchar" MaxLength="4000" />
+    <Property Name="TopicIDList" Type="varchar" MaxLength="4000" />
+    <Property Name="IsTop" Type="bit" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_ShopConcern”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_ShopConcern">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="addTime" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="IsOpen" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="IsOpen" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_ShopFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FileSize" Type="int" Nullable="false" />
+    <Property Name="DownloadCount" Type="int" Nullable="false" />
+    <Property Name="UploadTime" Type="datetime" Nullable="false" />
+    <Property Name="FileType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MIME" Type="varchar" MaxLength="50" />
+    <Property Name="AbsPath" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="SourcePath" Type="text" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="512" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_ShopFilesDownlog”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_ShopFilesDownlog">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="DownloadCount" />
+      <PropertyRef Name="LastDownTime" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ShopId" Type="int" Nullable="false" />
+    <Property Name="DownloadCount" Type="int" Nullable="false" />
+    <Property Name="LastDownTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_ShopOrder”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_ShopOrder">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Flag" />
+      <PropertyRef Name="AddTime" />
+    </Key>
+    <Property Name="ShopId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_ShopScore”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_ShopScore">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="GoodCount" />
+      <PropertyRef Name="BadCount" />
+      <PropertyRef Name="AvgCount" />
+      <PropertyRef Name="GoodSum" />
+      <PropertyRef Name="BadSum" />
+      <PropertyRef Name="AvgSum" />
+      <PropertyRef Name="Score" />
+    </Key>
+    <Property Name="ShopId" Type="int" Nullable="false" />
+    <Property Name="GoodCount" Type="int" Nullable="false" />
+    <Property Name="BadCount" Type="int" Nullable="false" />
+    <Property Name="AvgCount" Type="int" Nullable="false" />
+    <Property Name="GoodSum" Type="int" Nullable="false" />
+    <Property Name="BadSum" Type="int" Nullable="false" />
+    <Property Name="AvgSum" Type="int" Nullable="false" />
+    <Property Name="Score" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_SmtpMailPool">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Account" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Host" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Port" Type="int" Nullable="false" />
+    <Property Name="Flag" Type="int" Nullable="false" />
+    <Property Name="ErrorCount" Type="int" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="EnableSSL" Type="bit" Nullable="false" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="100" />
+    <Property Name="OnceCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_SpaceTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TPath" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="TPicture" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsLock" Type="tinyint" Nullable="false" />
+    <Property Name="IPoint" Type="int" />
+    <Property Name="GPoint" Type="int" />
+    <Property Name="isBG" Type="tinyint" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="UserNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_SX">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Receiver" Type="int" Nullable="false" />
+    <Property Name="Sender" Type="int" Nullable="false" />
+    <Property Name="ContentID" Type="int" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="RIS" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_SX_MD5">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MD5" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="TxtLen" Type="int" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_SysNotepad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="PostIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="ReplyContent" Type="nvarchar" MaxLength="200" />
+    <Property Name="Replier" Type="int" />
+    <Property Name="ReplyTime" Type="datetime" />
+    <Property Name="ReplyIP" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Nt_ToVote">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="VoteID" Type="int" />
+    <Property Name="OptionID" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Content" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="NT_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserGender" Type="int" Nullable="false" />
+    <Property Name="UserAge" Type="int" Nullable="false" />
+    <Property Name="UserCompName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCompAddr" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCompTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCompFax" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserMobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserWeb" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserMSN" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserQQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserSKYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserJob" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserDiscount" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserService" Type="int" Nullable="false" />
+    <Property Name="UserServices1" Type="int" Nullable="false" />
+    <Property Name="UserServices2" Type="int" Nullable="false" />
+    <Property Name="UserServices3" Type="int" Nullable="false" />
+    <Property Name="UserServices4" Type="int" Nullable="false" />
+    <Property Name="UserServices5" Type="int" Nullable="false" />
+    <Property Name="UserLanguage1" Type="int" Nullable="false" />
+    <Property Name="UserLanguage2" Type="int" Nullable="false" />
+    <Property Name="UserLanguage3" Type="int" Nullable="false" />
+    <Property Name="UserPro" Type="ntext" />
+    <Property Name="State" Type="int" />
+    <Property Name="LastLoginTime" Type="datetime" />
+    <Property Name="LastLoginIP" Type="nvarchar" MaxLength="15" />
+    <Property Name="LoginTimes" Type="int" Nullable="false" />
+    <Property Name="Province" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" Nullable="false" />
+    <Property Name="RegTime" Type="datetime" />
+    <Property Name="RegIP" Type="char" MaxLength="15" />
+    <Property Name="Portrait" Type="int" />
+    <Property Name="InviterID" Type="int" />
+    <Property Name="VerifyCode" Type="char" MaxLength="11" />
+    <Property Name="ConfirmTime" Type="datetime" />
+    <Property Name="Recommended" Type="bit" />
+    <Property Name="integral" Type="int" />
+    <Property Name="inteyb" Type="int" />
+    <Property Name="Kid" Type="int" />
+    <Property Name="Click" Type="int" />
+    <Property Name="IsVip" Type="bit" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="FriendPlaces" Type="int" Nullable="false" />
+    <Property Name="OutFriends" Type="int" Nullable="false" />
+    <Property Name="ClnCurrency" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_UserInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sex" Type="bit" Nullable="false" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="BirthidayDisplay" Type="int" />
+    <Property Name="Constellation" Type="int" />
+    <Property Name="MSN" Type="nvarchar" MaxLength="50" />
+    <Property Name="GTalk" Type="nvarchar" MaxLength="50" />
+    <Property Name="QQ" Type="nvarchar" MaxLength="20" />
+    <Property Name="Skype" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobilePrivacy" Type="int" />
+    <Property Name="EmailPrivacy" Type="int" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Addr" Type="nvarchar" MaxLength="100" />
+    <Property Name="WebSite" Type="nvarchar" MaxLength="50" />
+    <Property Name="Favourite" Type="nvarchar" MaxLength="200" />
+    <Property Name="FavMusics" Type="nvarchar" MaxLength="200" />
+    <Property Name="FavMovies" Type="nvarchar" MaxLength="200" />
+    <Property Name="FavCartoons" Type="nvarchar" MaxLength="200" />
+    <Property Name="FavGames" Type="nvarchar" MaxLength="200" />
+    <Property Name="FavSports" Type="nvarchar" MaxLength="200" />
+    <Property Name="FavBooks" Type="nvarchar" MaxLength="200" />
+    <Property Name="FavAdages" Type="nvarchar" MaxLength="200" />
+    <Property Name="AppreciateMen" Type="nvarchar" MaxLength="200" />
+    <Property Name="Presentation" Type="nvarchar" MaxLength="200" />
+    <Property Name="Vocation" Type="int" />
+    <Property Name="HomeProv" Type="int" />
+    <Property Name="HomeCity" Type="int" />
+    <Property Name="MSNPrivacy" Type="int" />
+    <Property Name="GTalkPrivacy" Type="int" />
+    <Property Name="QQPrivacy" Type="int" />
+    <Property Name="SkypePrivacy" Type="int" />
+    <Property Name="TelPrivacy" Type="int" />
+    <Property Name="AddrPrivacy" Type="int" />
+    <Property Name="WebSitePrivacy" Type="int" />
+  </EntityType>
+  <EntityType Name="NT_UserLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ActionType" Type="int" Nullable="false" />
+    <Property Name="LogTime" Type="datetime" Nullable="false" />
+    <Property Name="LogIP" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="CorrespondInfo" Type="int" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="IsDel" Type="bit" Nullable="false" />
+    <Property Name="CorreUserID" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_UserLoginExt”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_UserLoginExt">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="SinaUpdateTime" />
+      <PropertyRef Name="SinaExpiresTime" />
+      <PropertyRef Name="QQUpdateTime" />
+      <PropertyRef Name="QQExpiresTime" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="SinaWBUID" Type="varchar" MaxLength="50" />
+    <Property Name="SinaName" Type="char" MaxLength="255" />
+    <Property Name="SinaToken" Type="varchar" MaxLength="125" />
+    <Property Name="SinaAccessToken" Type="varchar" MaxLength="125" />
+    <Property Name="SinaRefreshToken" Type="varchar" MaxLength="125" />
+    <Property Name="SinaUpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="SinaExpiresTime" Type="datetime" Nullable="false" />
+    <Property Name="QQUID" Type="varchar" MaxLength="50" />
+    <Property Name="QQName" Type="nvarchar" MaxLength="255" />
+    <Property Name="QQToken" Type="varchar" MaxLength="125" />
+    <Property Name="QQAccessToken" Type="varchar" MaxLength="125" />
+    <Property Name="QQRefreshToken" Type="varchar" MaxLength="125" />
+    <Property Name="QQUpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="QQExpiresTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_UserPointHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="Content" Type="nvarchar" MaxLength="50" />
+    <Property Name="Point" Type="int" />
+    <Property Name="GPoint" Type="int" />
+    <Property Name="UTF" Type="tinyint" />
+    <Property Name="CreatTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NT_UserProps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="PropsID" Type="int" />
+    <Property Name="Total" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_UserSetting”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_UserSetting">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="PrivSpace" />
+      <PropertyRef Name="PrivFavourite" />
+      <PropertyRef Name="PrivEducate" />
+      <PropertyRef Name="PrivLasso" />
+      <PropertyRef Name="PrivFriends" />
+      <PropertyRef Name="PrivLeaveWord" />
+      <PropertyRef Name="PrivMiniBlog" />
+      <PropertyRef Name="PrivShare" />
+      <PropertyRef Name="PrivGroup" />
+      <PropertyRef Name="PrivMovies" />
+      <PropertyRef Name="ActUpdateData" />
+      <PropertyRef Name="ActAddFriend" />
+      <PropertyRef Name="ActLeaveWord" />
+      <PropertyRef Name="ActPicComment" />
+      <PropertyRef Name="ActSecede" />
+      <PropertyRef Name="ActDeliver" />
+      <PropertyRef Name="ActLogComment" />
+      <PropertyRef Name="ActMovieComment" />
+      <PropertyRef Name="ActPhotoLasso" />
+      <PropertyRef Name="ActShareComment" />
+      <PropertyRef Name="LastPostTime" />
+      <PropertyRef Name="LastPostIP" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="PrivSpace" Type="int" Nullable="false" />
+    <Property Name="PrivFavourite" Type="int" Nullable="false" />
+    <Property Name="PrivEducate" Type="int" Nullable="false" />
+    <Property Name="PrivLasso" Type="int" Nullable="false" />
+    <Property Name="PrivFriends" Type="int" Nullable="false" />
+    <Property Name="PrivLeaveWord" Type="int" Nullable="false" />
+    <Property Name="PrivMiniBlog" Type="int" Nullable="false" />
+    <Property Name="PrivShare" Type="int" Nullable="false" />
+    <Property Name="PrivGroup" Type="int" Nullable="false" />
+    <Property Name="PrivMovies" Type="int" Nullable="false" />
+    <Property Name="ActUpdateData" Type="bit" Nullable="false" />
+    <Property Name="ActAddFriend" Type="bit" Nullable="false" />
+    <Property Name="ActLeaveWord" Type="bit" Nullable="false" />
+    <Property Name="ActPicComment" Type="bit" Nullable="false" />
+    <Property Name="ActSecede" Type="bit" Nullable="false" />
+    <Property Name="ActDeliver" Type="bit" Nullable="false" />
+    <Property Name="ActLogComment" Type="bit" Nullable="false" />
+    <Property Name="ActMovieComment" Type="bit" Nullable="false" />
+    <Property Name="ActPhotoLasso" Type="bit" Nullable="false" />
+    <Property Name="ActShareComment" Type="bit" Nullable="false" />
+    <Property Name="LastPostTime" Type="datetime" Nullable="false" />
+    <Property Name="LastPostIP" Type="char" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NT_Visit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MasterID" Type="int" Nullable="false" />
+    <Property Name="VisitorID" Type="int" Nullable="false" />
+    <Property Name="LastVisitTime" Type="datetime" Nullable="false" />
+    <Property Name="LastVisitIP" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="VisitTimes" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NT_Visitor”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NT_Visitor">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="VisitMeTotal" />
+      <PropertyRef Name="VisitOtherTotal" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="VisitMeTotal" Type="bigint" Nullable="false" />
+    <Property Name="VisitOtherTotal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTV_FriendDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="FriendID" Type="int" Nullable="false" />
+    <Property Name="DescType" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.NTV_FriendDetailStat”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="NTV_FriendDetailStat">
+    <Key>
+      <PropertyRef Name="Modifier" />
+      <PropertyRef Name="Affirmant" />
+      <PropertyRef Name="DescType" />
+    </Key>
+    <Property Name="Modifier" Type="int" Nullable="false" />
+    <Property Name="Affirmant" Type="int" Nullable="false" />
+    <Property Name="DescType" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.Opensocial_activity_media_items”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Opensocial_activity_media_items">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="activity_id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="activity_id" Type="int" Nullable="false" />
+    <Property Name="mime_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="media_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="url" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.tb_errorlog”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="tb_errorlog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="errorlog" Type="text" />
+    <Property Name="errorTime" Type="datetime" />
+    <Property Name="ErrorUrl" Type="text" />
+    <Property Name="ErrorIP" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="OrderType" Type="int" Nullable="false" />
+    <Property Name="TotalMoneyCNY" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayMoneyCNY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RealPayMoneyCNY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Addtime" Type="datetime" Nullable="false" />
+    <Property Name="PayTime" Type="datetime" Nullable="false" />
+    <Property Name="ExpireTime" Type="datetime" />
+    <Property Name="PayType" Type="int" Nullable="false" />
+    <Property Name="OrderStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“CLN20140830.dbo.tmp_asset”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="tmp_asset">
+          <Property Name="F1" Type="float" />
+          <Property Name="february0014@hotmail#com" Type="nvarchar" MaxLength="255" />
+          <Property Name="cln" Type="nvarchar" MaxLength="255" />
+          <Property Name="刘献忠" Type="nvarchar" MaxLength="255" />
+          <Property Name="F5" Type="float" />
+          <Property Name="F6" Type="float" />
+          <Property Name="上海小城律师事务所" Type="nvarchar" MaxLength="255" />
+          <Property Name="上海市小木桥路251号天亿大厦901室" Type="nvarchar" MaxLength="255" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="+8621 6418 2255" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="float" />
+          <Property Name="&amp;nbsp;" Type="nvarchar" MaxLength="255" />
+          <Property Name="china-attorney@hotmail#com" Type="nvarchar" MaxLength="255" />
+          <Property Name="&amp;nbsp;1" Type="nvarchar" MaxLength="255" />
+          <Property Name="china-attorney" Type="nvarchar" MaxLength="255" />
+          <Property Name="合伙人" Type="nvarchar" MaxLength="255" />
+          <Property Name="F17" Type="float" />
+          <Property Name="F18" Type="float" />
+          <Property Name="F19" Type="float" />
+          <Property Name="F20" Type="float" />
+          <Property Name="F21" Type="float" />
+          <Property Name="F22" Type="float" />
+          <Property Name="F23" Type="float" />
+          <Property Name="F24" Type="float" />
+          <Property Name="F25" Type="float" />
+          <Property Name="F26" Type="float" />
+          <Property Name="律师（2001年司法部）、专利代理人（2003年国家知识产权局）、商标代理人（2003年国家工商局）、环境工程师（1997年中国" Type="ntext" />
+          <Property Name="F28" Type="float" />
+          <Property Name="F29" Type="datetime" />
+          <Property Name="0#0#0#0" Type="nvarchar" MaxLength="255" />
+          <Property Name="F31" Type="float" />
+          <Property Name="F32" Type="float" />
+          <Property Name="F33" Type="float" />
+          <Property Name="F34" Type="datetime" />
+          <Property Name="0#0#0#01" Type="nvarchar" MaxLength="255" />
+          <Property Name="F36" Type="float" />
+          <Property Name="F37" Type="float" />
+          <Property Name="F38" Type="nvarchar" MaxLength="255" />
+          <Property Name="F39" Type="nvarchar" MaxLength="255" />
+          <Property Name="F40" Type="nvarchar" MaxLength="255" />
+          <Property Name="F41" Type="float" />
+          <Property Name="F42" Type="float" />
+          <Property Name="F43" Type="float" />
+          <Property Name="F44" Type="float" />
+          <Property Name="F45" Type="float" />
+          <Property Name="F46" Type="float" />
+        </EntityType>-->
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“CLN20140830.dbo.V_CLN_Comment”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="V_CLN_Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Target" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Comment" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="AddDate" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Target" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="text" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="UserCompName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“CLN20140830.dbo.表空间占用情况”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="表空间占用情况">
+          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="rows" Type="bigint" />
+          <Property Name="reserved" Type="varchar" MaxLength="20" />
+          <Property Name="data" Type="varchar" MaxLength="20" />
+          <Property Name="index_size" Type="varchar" MaxLength="20" />
+          <Property Name="unused" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityContainer Name="CLN20140830ModelStoreContainer">
+    <EntitySet Name="CLN_AlertComment" EntityType="Self.CLN_AlertComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_Comment" EntityType="Self.CLN_Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_Email" EntityType="Self.CLN_Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_Favorite" EntityType="Self.CLN_Favorite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_Friend" EntityType="Self.CLN_Friend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_Group" EntityType="Self.CLN_Group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_GroupDiscuss" EntityType="Self.CLN_GroupDiscuss" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_GroupMember" EntityType="Self.CLN_GroupMember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_JieQiaHistory" EntityType="Self.CLN_JieQiaHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_ProjectType1" EntityType="Self.CLN_ProjectType1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_ProjectType2" EntityType="Self.CLN_ProjectType2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_Remark" EntityType="Self.CLN_Remark" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_RemarkShop" EntityType="Self.CLN_RemarkShop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_Resource" EntityType="Self.CLN_Resource" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_ResourceFiles" EntityType="Self.CLN_ResourceFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLN_UserAuthorze" EntityType="Self.CLN_UserAuthorze" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_AccountLog" EntityType="Self.NT_AccountLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Activity" EntityType="Self.NT_Activity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ActivityComment" EntityType="Self.NT_ActivityComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Admin" EntityType="Self.NT_Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_AdminLog" EntityType="Self.NT_AdminLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Album" EntityType="Self.NT_Album" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_APP_ProjectDocking" EntityType="Self.NT_APP_ProjectDocking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_APP_ProjectDocking_Comment" EntityType="Self.NT_APP_ProjectDocking_Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_APP_ProjectDocking_Files" EntityType="Self.NT_APP_ProjectDocking_Files" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_APP_Webtool" EntityType="Self.NT_APP_Webtool" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Blog" EntityType="Self.NT_Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_BlogComment" EntityType="Self.NT_BlogComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_BlogConcern" EntityType="Self.NT_BlogConcern" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_BlogDraft" EntityType="Self.NT_BlogDraft" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Board" EntityType="Self.NT_Board" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_CardDrawText" EntityType="Self.NT_CardDrawText" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_CardTemplate" EntityType="Self.NT_CardTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ClnMessage" EntityType="Self.NT_ClnMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ClnMsgAdvLink" EntityType="Self.NT_ClnMsgAdvLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Company" EntityType="Self.NT_Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_CurrencyPresent" EntityType="Self.NT_CurrencyPresent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Dict_Area" EntityType="Self.NT_Dict_Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Dict_Language" EntityType="Self.NT_Dict_Language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Dict_Service" EntityType="Self.NT_Dict_Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Dict_Vocation" EntityType="Self.NT_Dict_Vocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_DocumentType" EntityType="Self.NT_DocumentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_FeedBack" EntityType="Self.NT_FeedBack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_FeedBackComment" EntityType="Self.NT_FeedBackComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_FeedBackConcern" EntityType="Self.NT_FeedBackConcern" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ForwardEmailBody" EntityType="Self.NT_ForwardEmailBody" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Friend" EntityType="Self.NT_Friend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_FriendDesc" EntityType="Self.NT_FriendDesc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_FriendInvite" EntityType="Self.NT_FriendInvite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_GroupCompany" EntityType="Self.NT_GroupCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_GroupCooperation" EntityType="Self.NT_GroupCooperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_GroupMsg" EntityType="Self.NT_GroupMsg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_GroupMsgRead" EntityType="Self.NT_GroupMsgRead" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Inbox" EntityType="Self.NT_Inbox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Information" EntityType="Self.NT_Information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_InformationComment" EntityType="Self.NT_InformationComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_LeadMan" EntityType="Self.NT_LeadMan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_LeaveWord" EntityType="Self.NT_LeaveWord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Letter" EntityType="Self.NT_Letter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_MarketEmail" EntityType="Self.NT_MarketEmail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_MarketMobile" EntityType="Self.NT_MarketMobile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_MarketSell" EntityType="Self.NT_MarketSell" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_MarketSellExchange" EntityType="Self.NT_MarketSellExchange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_NewsLetterEmail" EntityType="Self.NT_NewsLetterEmail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_NewsLetterMobile" EntityType="Self.NT_NewsLetterMobile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Notepad" EntityType="Self.NT_Notepad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Notice" EntityType="Self.NT_Notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_OnlineUser" EntityType="Self.NT_OnlineUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Order" EntityType="Self.NT_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_OrderDets" EntityType="Self.NT_OrderDets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Outbox" EntityType="Self.NT_Outbox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_OutFriend" EntityType="Self.NT_OutFriend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_OutFriendFile" EntityType="Self.NT_OutFriendFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_OutFriendSell" EntityType="Self.NT_OutFriendSell" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_OutFriendSellExchange" EntityType="Self.NT_OutFriendSellExchange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Photo" EntityType="Self.NT_Photo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_PhotoComment" EntityType="Self.NT_PhotoComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_PhotoConcern" EntityType="Self.NT_PhotoConcern" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Recruit" EntityType="Self.NT_Recruit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_RecruitComment" EntityType="Self.NT_RecruitComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Request" EntityType="Self.NT_Request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Resource" EntityType="Self.NT_Resource" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ResourceComment" EntityType="Self.NT_ResourceComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ResourceConcern" EntityType="Self.NT_ResourceConcern" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_RetrievePwd" EntityType="Self.NT_RetrievePwd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Shop" EntityType="Self.NT_Shop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ShopFiles" EntityType="Self.NT_ShopFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_SmtpMailPool" EntityType="Self.NT_SmtpMailPool" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_SpaceTemplate" EntityType="Self.NT_SpaceTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_SX" EntityType="Self.NT_SX" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_SX_MD5" EntityType="Self.NT_SX_MD5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_SysNotepad" EntityType="Self.NT_SysNotepad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nt_ToVote" EntityType="Self.Nt_ToVote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_User" EntityType="Self.NT_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_UserInfo" EntityType="Self.NT_UserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_UserLog" EntityType="Self.NT_UserLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_UserPointHistory" EntityType="Self.NT_UserPointHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_UserProps" EntityType="Self.NT_UserProps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_Visit" EntityType="Self.NT_Visit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTV_FriendDetail" EntityType="Self.NTV_FriendDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Order" EntityType="Self.tb_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NT_ActivityConcern" EntityType="Self.NT_ActivityConcern" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_ActivityConcern].[ID] AS [ID], 
+    [NT_ActivityConcern].[UserID] AS [UserID], 
+    [NT_ActivityConcern].[addTime] AS [addTime]
+    FROM [dbo].[NT_ActivityConcern] AS [NT_ActivityConcern]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_CommentScore" EntityType="Self.NT_CommentScore" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_CommentScore].[UserId] AS [UserId], 
+    [NT_CommentScore].[GoodCount] AS [GoodCount], 
+    [NT_CommentScore].[BadCount] AS [BadCount], 
+    [NT_CommentScore].[AvgCount] AS [AvgCount], 
+    [NT_CommentScore].[GoodSum] AS [GoodSum], 
+    [NT_CommentScore].[BadSum] AS [BadSum], 
+    [NT_CommentScore].[AvgSum] AS [AvgSum], 
+    [NT_CommentScore].[Score] AS [Score]
+    FROM [dbo].[NT_CommentScore] AS [NT_CommentScore]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_EmailNotify" EntityType="Self.NT_EmailNotify" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_EmailNotify].[UserID] AS [UserID], 
+    [NT_EmailNotify].[ItemID] AS [ItemID], 
+    [NT_EmailNotify].[Announce] AS [Announce], 
+    [NT_EmailNotify].[PostTime] AS [PostTime], 
+    [NT_EmailNotify].[PostIP] AS [PostIP]
+    FROM [dbo].[NT_EmailNotify] AS [NT_EmailNotify]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_InformationConcern" EntityType="Self.NT_InformationConcern" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_InformationConcern].[ID] AS [ID], 
+    [NT_InformationConcern].[UserID] AS [UserID], 
+    [NT_InformationConcern].[addTime] AS [addTime]
+    FROM [dbo].[NT_InformationConcern] AS [NT_InformationConcern]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_InformationScore" EntityType="Self.NT_InformationScore" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_InformationScore].[InformationId] AS [InformationId], 
+    [NT_InformationScore].[GoodCount] AS [GoodCount], 
+    [NT_InformationScore].[BadCount] AS [BadCount], 
+    [NT_InformationScore].[AvgCount] AS [AvgCount], 
+    [NT_InformationScore].[GoodSum] AS [GoodSum], 
+    [NT_InformationScore].[BadSum] AS [BadSum], 
+    [NT_InformationScore].[AvgSum] AS [AvgSum], 
+    [NT_InformationScore].[Score] AS [Score]
+    FROM [dbo].[NT_InformationScore] AS [NT_InformationScore]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_MarketData" EntityType="Self.NT_MarketData" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_MarketData].[UserId] AS [UserId], 
+    [NT_MarketData].[UpdateTime] AS [UpdateTime], 
+    [NT_MarketData].[EmailsCount] AS [EmailsCount], 
+    [NT_MarketData].[MobilesCount] AS [MobilesCount], 
+    [NT_MarketData].[FaxsCount] AS [FaxsCount], 
+    [NT_MarketData].[Emails] AS [Emails], 
+    [NT_MarketData].[Mobiles] AS [Mobiles], 
+    [NT_MarketData].[Faxs] AS [Faxs]
+    FROM [dbo].[NT_MarketData] AS [NT_MarketData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_MarketFax" EntityType="Self.NT_MarketFax" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_MarketFax].[Id] AS [Id], 
+    [NT_MarketFax].[UserId] AS [UserId], 
+    [NT_MarketFax].[FaxCount] AS [FaxCount], 
+    [NT_MarketFax].[Flag] AS [Flag], 
+    [NT_MarketFax].[isDel] AS [isDel], 
+    [NT_MarketFax].[AddTime] AS [AddTime], 
+    [NT_MarketFax].[Name] AS [Name], 
+    [NT_MarketFax].[Content] AS [Content]
+    FROM [dbo].[NT_MarketFax] AS [NT_MarketFax]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_MarketSellLog" EntityType="Self.NT_MarketSellLog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_MarketSellLog].[UserId] AS [UserId], 
+    [NT_MarketSellLog].[SellId] AS [SellId], 
+    [NT_MarketSellLog].[LogTime] AS [LogTime]
+    FROM [dbo].[NT_MarketSellLog] AS [NT_MarketSellLog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_OutFriendFileContent" EntityType="Self.NT_OutFriendFileContent" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_OutFriendFileContent].[UserId] AS [UserId], 
+    [NT_OutFriendFileContent].[OutFriendFileId] AS [OutFriendFileId], 
+    [NT_OutFriendFileContent].[OutFriendId] AS [OutFriendId]
+    FROM [dbo].[NT_OutFriendFileContent] AS [NT_OutFriendFileContent]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_OutFriendSellLog" EntityType="Self.NT_OutFriendSellLog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_OutFriendSellLog].[Id] AS [Id], 
+    [NT_OutFriendSellLog].[UserId] AS [UserId], 
+    [NT_OutFriendSellLog].[OutFriendFileId] AS [OutFriendFileId], 
+    [NT_OutFriendSellLog].[AddTime] AS [AddTime]
+    FROM [dbo].[NT_OutFriendSellLog] AS [NT_OutFriendSellLog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_RecruitConcern" EntityType="Self.NT_RecruitConcern" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_RecruitConcern].[ID] AS [ID], 
+    [NT_RecruitConcern].[UserID] AS [UserID], 
+    [NT_RecruitConcern].[addTime] AS [addTime]
+    FROM [dbo].[NT_RecruitConcern] AS [NT_RecruitConcern]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_ShopConcern" EntityType="Self.NT_ShopConcern" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_ShopConcern].[ID] AS [ID], 
+    [NT_ShopConcern].[UserID] AS [UserID], 
+    [NT_ShopConcern].[addTime] AS [addTime], 
+    [NT_ShopConcern].[Type] AS [Type], 
+    [NT_ShopConcern].[IsOpen] AS [IsOpen]
+    FROM [dbo].[NT_ShopConcern] AS [NT_ShopConcern]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_ShopFilesDownlog" EntityType="Self.NT_ShopFilesDownlog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_ShopFilesDownlog].[UserId] AS [UserId], 
+    [NT_ShopFilesDownlog].[ShopId] AS [ShopId], 
+    [NT_ShopFilesDownlog].[DownloadCount] AS [DownloadCount], 
+    [NT_ShopFilesDownlog].[LastDownTime] AS [LastDownTime]
+    FROM [dbo].[NT_ShopFilesDownlog] AS [NT_ShopFilesDownlog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_ShopOrder" EntityType="Self.NT_ShopOrder" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_ShopOrder].[ShopId] AS [ShopId], 
+    [NT_ShopOrder].[UserId] AS [UserId], 
+    [NT_ShopOrder].[Type] AS [Type], 
+    [NT_ShopOrder].[Flag] AS [Flag], 
+    [NT_ShopOrder].[AddTime] AS [AddTime]
+    FROM [dbo].[NT_ShopOrder] AS [NT_ShopOrder]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_ShopScore" EntityType="Self.NT_ShopScore" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_ShopScore].[ShopId] AS [ShopId], 
+    [NT_ShopScore].[GoodCount] AS [GoodCount], 
+    [NT_ShopScore].[BadCount] AS [BadCount], 
+    [NT_ShopScore].[AvgCount] AS [AvgCount], 
+    [NT_ShopScore].[GoodSum] AS [GoodSum], 
+    [NT_ShopScore].[BadSum] AS [BadSum], 
+    [NT_ShopScore].[AvgSum] AS [AvgSum], 
+    [NT_ShopScore].[Score] AS [Score]
+    FROM [dbo].[NT_ShopScore] AS [NT_ShopScore]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_UserLoginExt" EntityType="Self.NT_UserLoginExt" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_UserLoginExt].[UserID] AS [UserID], 
+    [NT_UserLoginExt].[SinaWBUID] AS [SinaWBUID], 
+    [NT_UserLoginExt].[SinaName] AS [SinaName], 
+    [NT_UserLoginExt].[SinaToken] AS [SinaToken], 
+    [NT_UserLoginExt].[SinaAccessToken] AS [SinaAccessToken], 
+    [NT_UserLoginExt].[SinaRefreshToken] AS [SinaRefreshToken], 
+    [NT_UserLoginExt].[SinaUpdateTime] AS [SinaUpdateTime], 
+    [NT_UserLoginExt].[SinaExpiresTime] AS [SinaExpiresTime], 
+    [NT_UserLoginExt].[QQUID] AS [QQUID], 
+    [NT_UserLoginExt].[QQName] AS [QQName], 
+    [NT_UserLoginExt].[QQToken] AS [QQToken], 
+    [NT_UserLoginExt].[QQAccessToken] AS [QQAccessToken], 
+    [NT_UserLoginExt].[QQRefreshToken] AS [QQRefreshToken], 
+    [NT_UserLoginExt].[QQUpdateTime] AS [QQUpdateTime], 
+    [NT_UserLoginExt].[QQExpiresTime] AS [QQExpiresTime]
+    FROM [dbo].[NT_UserLoginExt] AS [NT_UserLoginExt]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_UserSetting" EntityType="Self.NT_UserSetting" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_UserSetting].[UserID] AS [UserID], 
+    [NT_UserSetting].[PrivSpace] AS [PrivSpace], 
+    [NT_UserSetting].[PrivFavourite] AS [PrivFavourite], 
+    [NT_UserSetting].[PrivEducate] AS [PrivEducate], 
+    [NT_UserSetting].[PrivLasso] AS [PrivLasso], 
+    [NT_UserSetting].[PrivFriends] AS [PrivFriends], 
+    [NT_UserSetting].[PrivLeaveWord] AS [PrivLeaveWord], 
+    [NT_UserSetting].[PrivMiniBlog] AS [PrivMiniBlog], 
+    [NT_UserSetting].[PrivShare] AS [PrivShare], 
+    [NT_UserSetting].[PrivGroup] AS [PrivGroup], 
+    [NT_UserSetting].[PrivMovies] AS [PrivMovies], 
+    [NT_UserSetting].[ActUpdateData] AS [ActUpdateData], 
+    [NT_UserSetting].[ActAddFriend] AS [ActAddFriend], 
+    [NT_UserSetting].[ActLeaveWord] AS [ActLeaveWord], 
+    [NT_UserSetting].[ActPicComment] AS [ActPicComment], 
+    [NT_UserSetting].[ActSecede] AS [ActSecede], 
+    [NT_UserSetting].[ActDeliver] AS [ActDeliver], 
+    [NT_UserSetting].[ActLogComment] AS [ActLogComment], 
+    [NT_UserSetting].[ActMovieComment] AS [ActMovieComment], 
+    [NT_UserSetting].[ActPhotoLasso] AS [ActPhotoLasso], 
+    [NT_UserSetting].[ActShareComment] AS [ActShareComment], 
+    [NT_UserSetting].[LastPostTime] AS [LastPostTime], 
+    [NT_UserSetting].[LastPostIP] AS [LastPostIP]
+    FROM [dbo].[NT_UserSetting] AS [NT_UserSetting]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NT_Visitor" EntityType="Self.NT_Visitor" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NT_Visitor].[UserId] AS [UserId], 
+    [NT_Visitor].[VisitMeTotal] AS [VisitMeTotal], 
+    [NT_Visitor].[VisitOtherTotal] AS [VisitOtherTotal]
+    FROM [dbo].[NT_Visitor] AS [NT_Visitor]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NTV_FriendDetailStat" EntityType="Self.NTV_FriendDetailStat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NTV_FriendDetailStat].[Modifier] AS [Modifier], 
+    [NTV_FriendDetailStat].[Affirmant] AS [Affirmant], 
+    [NTV_FriendDetailStat].[DescType] AS [DescType]
+    FROM [dbo].[NTV_FriendDetailStat] AS [NTV_FriendDetailStat]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Opensocial_activity_media_items" EntityType="Self.Opensocial_activity_media_items" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Opensocial_activity_media_items].[id] AS [id], 
+    [Opensocial_activity_media_items].[activity_id] AS [activity_id], 
+    [Opensocial_activity_media_items].[mime_type] AS [mime_type], 
+    [Opensocial_activity_media_items].[media_type] AS [media_type], 
+    [Opensocial_activity_media_items].[url] AS [url]
+    FROM [dbo].[Opensocial_activity_media_items] AS [Opensocial_activity_media_items]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tb_errorlog" EntityType="Self.tb_errorlog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tb_errorlog].[id] AS [id], 
+    [tb_errorlog].[errorlog] AS [errorlog], 
+    [tb_errorlog].[errorTime] AS [errorTime], 
+    [tb_errorlog].[ErrorUrl] AS [ErrorUrl], 
+    [tb_errorlog].[ErrorIP] AS [ErrorIP], 
+    [tb_errorlog].[ErrorLevel] AS [ErrorLevel]
+    FROM [dbo].[tb_errorlog] AS [tb_errorlog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_CLN_Comment" EntityType="Self.V_CLN_Comment" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [V_CLN_Comment].[Id] AS [Id], 
+    [V_CLN_Comment].[Target] AS [Target], 
+    [V_CLN_Comment].[Type] AS [Type], 
+    [V_CLN_Comment].[Comment] AS [Comment], 
+    [V_CLN_Comment].[UserId] AS [UserId], 
+    [V_CLN_Comment].[AddDate] AS [AddDate], 
+    [V_CLN_Comment].[UserCompName] AS [UserCompName]
+    FROM [dbo].[V_CLN_Comment] AS [V_CLN_Comment]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
